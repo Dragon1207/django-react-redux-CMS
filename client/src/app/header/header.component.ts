@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
 
   routeToGitHub() {
-    window.open('https://github.com/rafay826/Djudo','_blank');
+    window.open('https://github.com/rafay826/djudo','_blank');
   }
 }

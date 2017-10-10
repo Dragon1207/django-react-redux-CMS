@@ -3,7 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.contrib.auth.models import User
-from rest_framework import viewsets, generics
+from rest_framework import viewsets, generics, filters
 from blog.models import Post, Category
 from .serializers import UserSerializer, PostSerializer, CategorySerializer
 
@@ -20,6 +20,7 @@ class PostViewSet(viewsets.ModelViewSet):
     """
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+    filter_backends = (filters.DjangoFilterBackend,)
 
 class CategoryViewApi(viewsets.ModelViewSet):
     queryset = Category.objects.all()

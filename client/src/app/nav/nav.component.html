@@ -1,0 +1,8 @@
+<div class="menu-container" >
+  <button mat-button [matMenuTriggerFor]="menu">
+    <i class="material-icons menu">menu</i>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button routerLink="posts" mat-menu-item>Posts</button>
+  </mat-menu>
+</div>

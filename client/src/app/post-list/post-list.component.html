@@ -1,0 +1,31 @@
+<div class="post-list-container" >
+  <!-- <div class="flex flex-row">
+    <h1 class="flex-6">Posts</h1>
+    <h1 class="flex-6">Categories</h1>
+  </div> -->
+  <div class="flex">
+    <section class="flex-row flex-10">
+        <div class="flex-column post-column">
+          <h1 class="flex-12">Posts</h1>
+          <div class="post-container flex-12" >
+            <mat-card class="post" *ngFor=" let post of posts$ | async " >
+              <h2>{{ post.title }}</h2>
+              <h3>{{ post.description }}</h3>
+            </mat-card>
+          </div>
+        </div>
+    </section>
+    <section class="flex-row flex-2 categories-container" >
+      <div class="flex-column">
+        <h1 class="flex-12">Categories</h1>
+        <mat-card class="flex-12 no-padding">
+          <mat-selection-list #categories>
+            <mat-list-option *ngFor="let category of categories$ | async">
+              {{category.title}}
+            </mat-list-option>
+          </mat-selection-list>
+        </mat-card>
+      </div>
+    </section>
+  </div>
+</div>

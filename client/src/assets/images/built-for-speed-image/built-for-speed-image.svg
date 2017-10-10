@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="235px" height="133px" viewBox="0 0 235 133" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>built-for-speed-image</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="11.7143678" y="20.2930811" width="208.906225" height="99.4360974" rx="3"></rect>
+        <mask id="mask-2" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="208.906225" height="99.4360974" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <rect x="87.8577583" y="40.5861622" width="58.5718389" height="60.8792433" id="rect-3"></rect>
+        <rect id="path-4" x="0" y="0" width="234.287355" height="131.905027" rx="4"></rect>
+        <mask id="mask-5" maskContentUnits="userSpaceOnUse" maskUnits="objectBoundingBox" x="0" y="0" width="234.287355" height="131.905027" fill="white">
+            <use xlink:href="#path-4"></use>
+        </mask>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-Portrait" transform="translate(-735.000000, -487.000000)">
+            <g id="built-for-speed-text" transform="translate(430.000000, 487.856495)">
+                <g id="built-for-speed-image" transform="translate(305.712645, 0.000000)">
+                    <use id="Rectangle-2" stroke="#CF000F" mask="url(#mask-2)" stroke-width="2" fill="#FFE2E2" opacity="0.606751399" xlink:href="#path-1"></use>
+                    <g id="ic_timelapse_black_48dp_1x">
+                        <image x="87.8577583" y="40.5861622" width="58.5718389" height="60.8792433" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABGdBTUEAA1teXP8meAAABHRJREFUaAXtmM2rlVUUxs/VMiwM5Jp4K7XrQAdRCWoaONH+hUwlCkTRmRNRjKD8QLSGBiJYg4g+rFlg2UCdq0QNGphpKYqgZtRNzTDr9+A9sO7jOu95P861QWfBw9lr7bXXWnu/e6+99mm1+tRfgf/3Cgz0aPoTsLMYLAMLwVwwBKYA0Qi4BH4AJ8AxcBzcAf8pzcL7O+Ai+KciLqC/B8wE952m4/EA+AtUDdz1b2FjP5gG7gu9ipdrwANpyv+CzdXjOYMHMf5+QeC/0/cxWAcWgUEwaRRaXcnU9wmQbqcJ62s8AHpKD2PtMMicnkK+BkwGZUn21oLTILN5CLl0ekJa+Sz4G8g3gSarJdubwU3gE9Ekmthm+F16jx83rnT49Gh/L36exciPwP1oOzUiHVg3+g2yxypYvY2u7oAj4A0wB2SkzPYtcH+rMuUyMhn81Qxq5asELz8ekC6vz8GwOo3k07/EVWRKCJVJeT46vw5fZ9tEG7H9B/ZeS6LSdvIzsS/RKxTphvVLSge2DsWgs/aWxKhkUVeX3ROJXkeRyoNoQKmybkaIdjq1X7FIlJ18K+02nY6sCrOLIDpTnq9L0U6n9gjGZ5uDdfBR/zz8gOmk7As28Df4KpeUG41BFLU/soGPwGticczzptPSajstM4EuFB2q8aaVONDZa5OSxpdtZvR3ufHpBFTPRzoamXFsT8T2y2bffS+w/nQCeoxE+i4y49z2r+++55Xxr7I27rvBMoMKdKKtbu2fzc50+DjmivWnrOd/lcRNKAbQra19H+khmDhG98EYyg7xGIWGzLaK4xVsY/ItVPept41I4uqVaf9k0XfdQtkXUOUYaTgyJdvb0XurpG5U+z4ytOcY77GlWUgVZ6TnIlOireDfLKGXqXjadN8qacZQ9gVOjNFotV40vojdQWfd4PVu+MyMu++T1p+yS5DG/aoHeJn3qYKP46q2P7BoVEqo5I52/JK1IXdZfZULNlAP8CLaSWd0VLWtesvL5fVm8xz8AChFb6MVgzgNrxI3o6bB38HoS2ZYd88ZEGPYZTqF7Ex6/ULbnIxYiiw6qdpW8BsTu6+b3T/hH0/0CkX6RyAGdAP+mWSEHiO+V+O4Tm1tmxWJvfnIFHAc926i11U0DQ2/1PRK0uXi9BSCT8HfIDrO2so2H4IngdMMBGdBHHcZfqorluVXmzEZ1l8f2SRkcxhsBV8DJYJbQKt5HnwFtA1ngYwUvKrPGLzafj6ysYWy/YlRfQn9e9Ar0rbxlVfwtbaOB6XH/CHgK6NX2hbQKTvR1ZWUbXRg9ZXc/hfIJoKekC6ybBJyqq+hB7gunrIkXeV5T5XtSSj4Ju/wNA59iWw7tZ2O0H8QbABLgM6J6nlBbcnUp3KhKGtp2/Rs5bF1D+lg6+++duC9+lW2aXxg74m2g2AQ+T6gLNN0Atr/e0HtVMnY2qRcvhsoTVadiGoblQdDoDaVLo66eFABuBAsBwvAPKDAHgUiVbSXwCmgkvjo6K8m3af+CvRXoMEK/AtRXFwFDs7P0wAAAABJRU5ErkJggg=="></image>
+                        <use fill="#CF000F" fill-rule="evenodd" xlink:href="#rect-3"></use>
+                    </g>
+                    <use id="Rectangle-3" stroke="#CF000F" mask="url(#mask-5)" stroke-width="2" opacity="0.438607743" xlink:href="#path-4"></use>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

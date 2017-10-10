@@ -1,0 +1,27 @@
+<section class="home" >
+  <div class="row-container flex flex-row">
+    <div>
+      <div class="speed-text label" >{{ config.speed.label }}</div>
+      <div class="speed-text description" >{{ config.speed.description }}</div>
+    </div>
+    <!-- <img [srcset]="[config.speed.img, config.speed.img2x]" > -->
+    <div class="speed-image-container scale">
+      <img [src]="config.speed.timelapseFrameImg" >
+      <i class="material-icons timelapse-icon">timelapse</i>
+    </div>
+  </div>
+  <div class="row-container flex flex-row">
+    <img class="scale" [src]="config.hybrid.img" >
+    <div>
+      <div class="hybrid-text label flex-6" >{{ config.hybrid.label }}</div>
+      <div class="hybrid-text description flex-6" >{{ config.hybrid.description }}</div>
+    </div>
+  </div>
+  <div class="row-container">
+    <div>
+      <div class="allDevices-text label flex-6" >{{ config.allDevices.label }}</div>
+      <div class="allDevices-text description flex-6" >{{ config.allDevices.description }}</div>
+    </div>
+    <img class="allDevices-img" [src]="config.allDevices.img" >
+  </div>
+</section>

@@ -1,0 +1,46 @@
+@import '~assets/styles/grid';
+@import '~assets/styles/mixins';
+@import '~assets/styles/variables';
+
+:host {
+  .scale {
+    transform: scale(1.5);
+  }
+  .row-container {
+    width: 48%;
+    margin: 12% auto;
+    color: $grey;
+
+    .speed-image-container {
+      position: relative;
+      .timelapse-icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) scale(2);
+        color: $monza-red;
+      }
+    }
+
+    .label {
+      @include pFontStack(36px, 500);
+    }
+
+    .description {
+      @include pFontStack(18px, 300)
+    }
+
+    .hybrid-text {
+      text-align: right;
+    }
+
+    .allDevices-text {
+      text-align: center;
+    }
+
+    .allDevices-img {
+      margin-top: 7%;
+      margin-left: 8%;
+    }
+  }
+}

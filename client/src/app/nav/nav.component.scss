@@ -1,0 +1,22 @@
+@import '~assets/styles/variables';
+
+:host {
+  .menu-container {
+    position: absolute;
+    left: 25px;
+    top: 19px;
+
+    .menu {
+      color: $white;
+      cursor: pointer;
+    }
+
+    button {
+      background: none;
+      border: none;
+      mat-icon {
+        color: white;
+      }
+    }
+  }
+}

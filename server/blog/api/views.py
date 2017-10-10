@@ -21,6 +21,11 @@ class PostViewSet(viewsets.ModelViewSet):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
 
+class PostListView(generics.ListAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    filter_fields = ('id', 'title', 'slug')
+
 class CategoryViewApi(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer

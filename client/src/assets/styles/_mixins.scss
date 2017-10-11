@@ -5,3 +5,14 @@
   font-size: $size;
   font-weight: $weight;
 }
+
+@keyframes cardHover {
+  from {
+    color: $grey;
+  }
+  to {
+    box-shadow: -1px 4px 8px $night-black;
+    // background: $monza-red;
+    color: $black;
+  }
+}

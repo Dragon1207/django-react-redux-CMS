@@ -32,14 +32,17 @@
     .post-container {
       mat-card {
         transition: box-shadow .25s;
-        background-color: $white;
         &:hover {
-          box-shadow: -1px 4px 8px $night-black;
+          box-shadow: -1px 4px 8px $grey;
         }
         cursor: pointer;
         &.post {
           margin: 25px 0;
           color: $grey;
+          transition: color .25s;
+          &:hover {
+            color: #2574A9;
+          }
         }
       }
     }

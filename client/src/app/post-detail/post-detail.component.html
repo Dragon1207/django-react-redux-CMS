@@ -1,0 +1,22 @@
+<section>
+  <div class="flex post-header-container ">
+    <div class="flex-9">
+      <h1 class="post-title">{{ (post$ | async)?.title }}</h1>
+    </div>
+    <div class="flex-3 post-info flex flex-column">
+      <div class="flex-row">
+        <span class="flex-6">Published:</span>
+        <p class="flex-6">{{ (post$ | async)?.created  | date:'shortDate'}}</p>
+      </div>
+      <div class="flex-row">
+        <span class="flex-6">Category:</span>
+        <p class="flex-6">{{ (post$ | async)?.category }}</p>
+      </div>
+    </div>
+  </div>
+  <div class="post-body" >
+    <mat-card>
+      <p>{{ (post$ | async)?.body }}</p>
+    </mat-card>
+  </div>
+</section>

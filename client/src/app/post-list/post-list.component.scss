@@ -24,15 +24,18 @@
   }
   .post-list-container {
     margin-top: 50px;
-    width: 65%;
+    width: 90%;
     margin: auto;
     .post-column {
       width: 90%
     }
     .post-container {
-      .post {
-        margin: 25px 0;
-        color: $grey;
+      mat-card {
+        cursor: pointer;
+        &.post {
+          margin: 25px 0;
+          color: $grey;
+        }
       }
     }
 

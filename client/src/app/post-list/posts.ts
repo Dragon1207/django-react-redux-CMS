@@ -3,9 +3,9 @@ export interface Post {
     title: string;
     slug: string;
     description: string;
-    blog: string;
+    body: string;
     published: boolean;
-    created: DateTimeFormat;
+    created: DateTimeFormat | null;
     category: string;
 }
 

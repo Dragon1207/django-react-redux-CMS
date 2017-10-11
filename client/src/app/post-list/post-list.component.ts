@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { PostsService } from '@app/shared/post.service';
+import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { LoadPostsAction, LoadCategoriesAction } from '@app/state/posts/post.actions';
+import { LoadPostsAction, LoadCategoriesAction, SelectPostAction } from '@app/state/posts/post.actions';
 import { Post, Category } from './posts';
 import { Observable } from 'rxjs/Observable';
 import { PostsQuery } from '@app/state/posts/post.reducers';
+import { AppState } from '@app/state';
 
 @Component({
   selector: 'djudo-post-list',
@@ -17,8 +18,8 @@ export class PostListComponent implements OnInit {
   categories$: Observable<Category[]>
 
   constructor(
-    private PostsService: PostsService,
-    private store: Store<any>
+    private store: Store<AppState>,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -26,5 +27,10 @@ export class PostListComponent implements OnInit {
     this.posts$ = this.store.select(PostsQuery.getPosts);
     this.store.dispatch(new LoadCategoriesAction());
     this.categories$ = this.store.select(PostsQuery.getCategories);
+  }
+
+  getPost(id: number) {
+    this.store.dispatch(new SelectPostAction(id));
+    this.router.navigate(['posts', id]);
   }
 }

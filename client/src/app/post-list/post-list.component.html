@@ -8,7 +8,7 @@
         <div class="flex-column post-column">
           <h1 class="flex-12">Posts</h1>
           <div class="post-container flex-12" >
-            <mat-card class="post" *ngFor=" let post of posts$ | async " >
+            <mat-card class="post" *ngFor=" let post of posts$ | async " (click)="getPost(post.id)" >
               <h2>{{ post.title }}</h2>
               <h3>{{ post.description }}</h3>
             </mat-card>

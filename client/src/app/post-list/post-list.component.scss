@@ -30,9 +30,12 @@
       width: 90%
     }
     .post-container {
-      .post {
-        margin: 25px 0;
-        color: $grey;
+      mat-card {
+        cursor: pointer;
+        &.post {
+          margin: 25px 0;
+          color: $grey;
+        }
       }
     }
 

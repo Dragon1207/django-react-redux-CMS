@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { PostsService } from '@app/shared/post.service';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
 import { LoadPostsAction, LoadCategoriesAction, SelectPostAction } from '@app/state/posts/post.actions';
@@ -19,7 +18,6 @@ export class PostListComponent implements OnInit {
   categories$: Observable<Category[]>
 
   constructor(
-    private postsService: PostsService,
     private store: Store<AppState>,
     private router: Router
   ) { }

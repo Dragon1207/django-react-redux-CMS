@@ -3,20 +3,25 @@
 @import '~assets/styles/variables';
 
 :host {
-  section {
+  .post-detail-container {
+    width: 80%;
+    margin: auto;
       .post-header-container {
         margin-bottom: 3%;
         position: relative;
         .post-title {
-          color: $grey;
+          color: $night-black;
           font-size: 64px;
+          font-weight: 300;
+          text-shadow: 0 2px 1px $black;
         }
         .post-info {
-          position: absolute;
+          position: relative;
           right: 0;
           bottom: 0;
           text-align: right;
           color: $grey;
+          justify-content: flex-end;
           span {
             font-weight: 500;
             margin-right: 10px;
@@ -27,6 +32,7 @@
         }
       }
       .post-body {
+        white-space: pre-line;
         mat-card {
           p {
             color: $grey;

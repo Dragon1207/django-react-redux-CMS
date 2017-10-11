@@ -6,7 +6,6 @@ from django.core.urlresolvers import reverse
 
 class PostManager(models.Manager):
     def active(self, *args, **kwargs):
-        # Post.objects.all() = super(PostManager, self).all()
         return super(PostManager, self)
 
 class Post(models.Model):

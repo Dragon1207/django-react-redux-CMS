@@ -6,7 +6,6 @@ import { AppState } from '../index';
 export interface PostsState {
     list: Post[];
     post: Post;
-    selectedId: number | null;
     categories: Category[]
 }
 
@@ -23,7 +22,6 @@ const INITIAL_STATE: PostsState = {
         category: '',
 
     },
-    selectedId: null,
     categories: []
 }
 

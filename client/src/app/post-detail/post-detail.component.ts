@@ -22,7 +22,6 @@ export class PostDetailComponent implements OnInit {
     let id = this.router.snapshot.params.id;
     this.store.dispatch(new SelectPostAction(id));
     this.post$ = this.store.select(PostsQuery.getPost);
-    this.post$.subscribe(res => console.log(res));
   }
 
 }

@@ -66,3 +66,8 @@ i.e. http://localhost:8000/api/posts/
 ```
 ng build
 ```
+
+Features coming soon:
+- category filters and view
+- comments
+- post images

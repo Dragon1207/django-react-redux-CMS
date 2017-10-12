@@ -18,7 +18,7 @@ project-root/
   -server
   -virtualenv
 ```
-4. Created a virtual environment within your project root directory
+4. Create a virtual environment within your project root directory
 ```
 cd /path/to/project; virtualenv .
 ```
@@ -36,14 +36,26 @@ mysql.server start
 ```
 8. Configure the Database information
 ```
-/<project-path/server/djudo/settings.py
+/<project-path>/server/djudo/settings.py
 //edit the Databases object, and fill out the appropriate information
 ```
 9. Change to the server directory and run the django server
 ```
-cd /<project-path>/server; python manage.py runserver //http://localhost:8000
+cd /<project-path>/server; python manage.py runserver //the url is at http://localhost:8000
 ```
-10. Change to the client directory and run the install.
+10. Create a super user (admin)
+```
+python manage.py createsuperuser
+```
+11. Migrate database
+```
+python manage.py migrate
+```
+12. Run makemigrations, and your server will be setup
+```
+python manage.py makemigrations
+```
+13. Change to the client directory and run the install.
 ```
 npm install
 ```
@@ -51,9 +63,13 @@ or if you have yarn
 ```
 yarn install
 ```
-11. Run the client server
+14. Run the client server
 ```
-ng serve //http://localhost:4200
+ng serve //the url is http://localhost:4200
+```
+15. Head over to the server admin page to add posts and categories
+```
+http://localhost:8000/admin/
 ```
 
 # API

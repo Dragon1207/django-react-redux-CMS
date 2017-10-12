@@ -7,15 +7,7 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         model = User
         fields = ('url', 'username', 'email', 'groups')
 
-class PostSerializer(serializers.Serializer):
-    id = serializers.PrimaryKeyRelatedField(read_only=True)
-    title = serializers.CharField(max_length=100)
-    slug = serializers.SlugField(max_length=100)
-    description = serializers.CharField(max_length=255)
-    body = serializers.CharField(max_length=1000)
-    published = serializers.BooleanField(default=True)
-    created = serializers.DateTimeField()
-    category = serializers.StringRelatedField()
+class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = (
@@ -29,10 +21,7 @@ class PostSerializer(serializers.Serializer):
             'category'
         )
 
-class CategorySerializer(serializers.Serializer):
-    id = serializers.PrimaryKeyRelatedField(read_only=True)
-    title = serializers.CharField(max_length=100)
-    slug = serializers.SlugField(max_length=100)
+class CategorySerializer(serializers.ModelSerializer):
     class Meta:
         model = Category
         fields = (

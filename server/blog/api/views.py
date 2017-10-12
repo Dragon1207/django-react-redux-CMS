@@ -25,3 +25,9 @@ class PostViewSet(viewsets.ModelViewSet):
 class CategoryViewApi(viewsets.ModelViewSet):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+class PostDetailView(generics.RetrieveAPIView):
+    queryset = Post.objects.all()
+    serializer_class = PostSerializer
+    lookup_field = 'slug'
+    lookup_url_kwarg = "slug"

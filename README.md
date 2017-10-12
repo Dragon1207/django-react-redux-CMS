@@ -2,7 +2,7 @@
 Django + Angular CMS
 
 # Getting Started
-1. Make sure you have mysql, python, pip, node, and @angular/cli installed. Homebrew is optional.
+1. Make sure you have mysql, python, pip, node, and @angular/cli installed.
 2. Install virtualenv
 ```
 pip install virtualenv

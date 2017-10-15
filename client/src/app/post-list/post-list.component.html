@@ -15,17 +15,5 @@
           </div>
         </div>
     </section>
-    <section class="flex-row flex-2 categories-container" >
-      <div class="flex-column">
-        <h1 class="flex-12">Categories</h1>
-        <mat-card class="flex-12 no-padding">
-          <mat-selection-list #categories>
-            <mat-list-option *ngFor="let category of categories$ | async">
-              {{category.title}}
-            </mat-list-option>
-          </mat-selection-list>
-        </mat-card>
-      </div>
-    </section>
   </div>
 </div>

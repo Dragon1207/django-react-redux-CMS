@@ -10,7 +10,11 @@
       </div>
       <div class="flex-row">
         <span class="flex-3">Category:</span>
-        <p>{{ (post$ | async)?.category }}</p>
+        <ng-container *ngFor="let category of (categories$ | async)" >
+            <ng-container *ngIf="category.id == (post$ | async)?.category" >
+                <p>{{ category.title }}</p>
+            </ng-container>
+        </ng-container>
       </div>
     </div>
   </div>

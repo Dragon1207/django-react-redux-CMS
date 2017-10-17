@@ -21,7 +21,7 @@ class Post(models.Model):
     objects = PostManager()
 
     def __unicode__(self):
-        return self.title
+        return '%s' % self.title
 
     def __str__(self):
         return self.title

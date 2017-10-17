@@ -26,9 +26,10 @@ cd /path/to/project; virtualenv .
 ```
 source bin/activate
 ```
-6. Install environment requirements (many need to manually install Django through pip)
+6. Install environment requirements
 ```
 pip install -r requirements.txt
+//if there's a 'django.core cannot be found' manually pip install django before the requirements.txt
 ```
 7. Start MySQL and create a database
 ```

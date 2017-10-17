@@ -17,8 +17,19 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
         model = User
         fields = ('url', 'username', 'email', 'groups')
 
+class CategorySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Category
+        fields = (
+            'id',
+            'title',
+            'slug'
+        )
+
 class PostSerializer(serializers.ModelSerializer):
     url = post_detail_url
+    category_obj = CategorySerializer(source='category')
+
     class Meta:
         model = Post
         fields = (
@@ -30,7 +41,7 @@ class PostSerializer(serializers.ModelSerializer):
             'body',
             'published',
             'created',
-            'category'
+            'category_obj'
         )
 
 class PostSlugSerializer(serializers.ModelSerializer):
@@ -47,13 +58,4 @@ class PostSlugSerializer(serializers.ModelSerializer):
             'published',
             'created',
             'category'
-        )
-
-class CategorySerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Category
-        fields = (
-            'id',
-            'title',
-            'slug'
         )

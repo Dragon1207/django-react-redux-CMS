@@ -26,7 +26,7 @@ cd /path/to/project; virtualenv .
 ```
 source bin/activate
 ```
-6. Install environment requirements
+6. Install environment requirements (many need to manually install Django through pip)
 ```
 pip install -r requirements.txt
 ```
@@ -45,17 +45,17 @@ mysql create database <database-name>
 ```
 cd /<project-path>/server; python manage.py runserver //the url is at http://localhost:8000
 ```
-10. Create a super user (admin)
-```
-python manage.py createsuperuser
-```
-11. Migrate database
+10. Migrate database
 ```
 python manage.py migrate
 ```
-12. Run makemigrations, and your server will be setup
+11. Run makemigrations, and your server will be setup
 ```
 python manage.py makemigrations
+```
+12. Create a super user (admin)
+```
+python manage.py createsuperuser
 ```
 13. Change to the client directory and run the install.
 ```
@@ -86,6 +86,5 @@ ng build
 ```
 
 Features coming soon:
-- category filters and view
 - comments
 - post images

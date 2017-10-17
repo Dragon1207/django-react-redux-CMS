@@ -45,19 +45,10 @@ class CategoryViewApi(generics.ListAPIView):
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
-# class PostCreateAPIView(generics.CreateAPIView):
-#     queryset = Post.objects.all()
-#     serializer_class = PostCreateUpdateSerializer
-#     #permission_classes = [IsAuthenticated]
-
-#     def perform_create(self, serializer):
-#         serializer.save(user=self.request.user)
-
 
 class PostDetailAPIView(generics.RetrieveAPIView):
     queryset = Post.objects.all()
     serializer_class = PostSerializer
-    # lookup_field = 'slug'
 
 class PostSlugAPIView(generics.RetrieveAPIView):
     queryset = Post.objects.all()

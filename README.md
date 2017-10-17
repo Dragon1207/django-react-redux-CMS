@@ -30,7 +30,7 @@ source bin/activate
 ```
 pip install -r requirements.txt
 ```
-7. Start MySQL
+7. Start MySQL and create a database
 ```
 mysql.server start;
 mysql -u root -p (enter mysql username and password)

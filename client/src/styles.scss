@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import "~assets/styles/variables";
+@import "~assets/styles/mixins";
 
 body, p, h1, h2, h3, h4, h5 {
     margin: 0;
@@ -16,6 +17,10 @@ html {
     .content-container {
       padding-bottom: 50px;
       font-family: $roboto;
+      p {
+        @include pFontStack(18px, 300);
+        line-height: 30px;
+      }
     }
   }
 }

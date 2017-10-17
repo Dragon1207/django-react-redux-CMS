@@ -1,5 +1,9 @@
 # See http://help.github.com/ignore-files/ for more about ignoring files.
 
+# Django /static-root/
+/static-root
+/server/static
+
 client/node_modules
 *.pyc
 *.DS_Store

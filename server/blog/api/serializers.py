@@ -29,7 +29,10 @@ class CategorySerializer(serializers.ModelSerializer):
 class PostSerializer(serializers.ModelSerializer):
     url = post_detail_url
     category_obj = CategorySerializer(source='category')
-
+    image = serializers.SerializerMethodField()
+    def get_image(self, instance):
+        # returning image url if there is an image else blank string
+        return instance.image.url if instance.image else ''
     class Meta:
         model = Post
         fields = (
@@ -37,6 +40,7 @@ class PostSerializer(serializers.ModelSerializer):
             'id',
             'title',
             'slug',
+            'image',
             'description',
             'body',
             'published',

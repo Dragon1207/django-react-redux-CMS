@@ -15,15 +15,12 @@ import { Observable } from 'rxjs/Observable';
 export class PostDetailComponent implements OnInit {
 
   post$: Store<Post>;
-  categories$: Store<Category[]>;
 
   constructor( private store: Store<AppState>, private router: ActivatedRoute ) { }
 
   ngOnInit() {
     let id = this.router.snapshot.params.id;
     this.store.dispatch(new SelectPostAction(id));
-    this.store.dispatch(new LoadCategoriesAction());
-    this.categories$ = this.store.select(PostsQuery.getCategories);
     this.post$ = this.store.select(PostsQuery.getPost);
   }
 

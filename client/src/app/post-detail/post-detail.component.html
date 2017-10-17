@@ -1,23 +1,23 @@
 <section class="post-detail-container">
-  <div class="flex post-header-container ">
-    <div class="flex-9">
-      <h1 class="post-title">{{ (post$ | async)?.title }}</h1>
-    </div>
-    <div class="flex-3 post-info flex flex-column">
-      <div class="flex-row">
-        <span class="flex-3">Published:</span>
-        <p>{{ (post$ | async)?.created  | date:'shortDate'}}</p>
-      </div>
-      <div class="flex-row">
-        <span class="flex-3">Category:</span>
-        <ng-container>
-          <p>{{ (post$ | async)?.category_obj?.title }}</p>
-        </ng-container>
-      </div>
-    </div>
-  </div>
   <div class="post-body" >
     <mat-card>
+      <div class="flex post-header-container ">
+          <div class="flex-9">
+            <h1 class="post-title">{{ (post$ | async)?.title }}</h1>
+          </div>
+          <div class="flex-3 post-info flex flex-column">
+            <div class="flex-row">
+              <span class="flex-3">Published:</span>
+              <p>{{ (post$ | async)?.created  | date:'shortDate'}}</p>
+            </div>
+            <div class="flex-row">
+              <span class="flex-3">Category:</span>
+              <ng-container>
+                <p>{{ (post$ | async)?.category_obj?.title }}</p>
+              </ng-container>
+            </div>
+          </div>
+        </div>
       <p>{{ (post$ | async)?.body }}</p>
     </mat-card>
   </div>

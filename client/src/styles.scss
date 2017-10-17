@@ -21,6 +21,10 @@ html {
         @include pFontStack(18px, 300);
         line-height: 30px;
       }
+
+      .post-container {
+        width: 70%;
+      }
     }
   }
 }

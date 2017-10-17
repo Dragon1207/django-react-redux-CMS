@@ -20,9 +20,8 @@ from rest_framework import routers
 from blog.api import views, urls
 
 urlpatterns = [
-    url(r'^api/', include(urls.router.urls)),
+    url(r'^api/posts/', include("blog.api.urls", namespace='posts-api')),
     url(r'^admin/', admin.site.urls),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
-    url(r'^api/posts/(?P<tax>[\w-]+)$', views.PostDetailView.as_view(), name='detail'),
     url(r'^.*', TemplateView.as_view(template_name="ng-index.html"), name='home'),
 ]

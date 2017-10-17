@@ -21,10 +21,16 @@ class Post(models.Model):
     objects = PostManager()
 
     def __unicode__(self):
-        return '%s' % self.title
+        return self.title
+
+    def __str__(self):
+        return self.title
 
     def get_absolute_url(self):
-        return reverse('blog.views.post', args=[self.slug])
+        return reverse("blog.views.post", kwargs={"slug": self.slug})
+
+    def get_api_url(self):
+        return reverse("posts-api:detail", kwargs={"slug": self.slug})
 
 class CategoryManager(models.Manager):
     def active(self, *args, **kwargs):

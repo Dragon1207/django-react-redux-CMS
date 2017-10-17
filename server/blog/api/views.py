@@ -31,26 +31,36 @@ class PostViewSet(generics.ListAPIView):
     search_fields = ['title', 'body']
 
     def get_queryset(self, *args, **kwargs):
-        #queryset_list = super(PostListAPIView, self).get_queryset(*args, **kwargs)
-        queryset_list = Post.objects.all() #filter(user=self.request.user)
+        """
+        GET request variable 'q' searches for post title
+        """
+        queryset_list = Post.objects.all()
         query = self.request.GET.get("q")
         if query:
-            queryset_list = queryset_list.filter(
-                    Q(title__icontains=query)
-                    ).distinct()
+            queryset_list = queryset_list.filter( Q(title__icontains=query) ).distinct()
         return queryset_list
 
 
 class CategoryViewApi(generics.ListAPIView):
+    """
+    List Serialized Category Objects
+    """
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
 
 
 class PostDetailAPIView(generics.RetrieveAPIView):
+    """
+    Get a Post by Primary Key
+    """
     queryset = Post.objects.all()
     serializer_class = PostSerializer
+    lookup_field = 'pk'
 
 class PostSlugAPIView(generics.RetrieveAPIView):
+    """
+    Get a Post by Slug
+    """
     queryset = Post.objects.all()
     serializer_class = PostSerializer
     lookup_field = 'slug'

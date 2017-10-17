@@ -24,6 +24,7 @@ cd /path/to/project; virtualenv .
 ```
 5. Start the virtual environment
 ```
+cd virtualenv;
 source bin/activate
 ```
 6. Install environment requirements

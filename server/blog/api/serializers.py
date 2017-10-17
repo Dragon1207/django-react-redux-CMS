@@ -4,7 +4,12 @@ from rest_framework import serializers
 
 post_detail_url = serializers.HyperlinkedIdentityField(
         view_name='posts-api:detail',
-        # lookup_field='slug'
+        lookup_field='pk'
+    )
+
+post_slug_url = serializers.HyperlinkedIdentityField(
+        view_name='posts-api:slug',
+        lookup_field='slug'
     )
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
@@ -14,6 +19,22 @@ class UserSerializer(serializers.HyperlinkedModelSerializer):
 
 class PostSerializer(serializers.ModelSerializer):
     url = post_detail_url
+    class Meta:
+        model = Post
+        fields = (
+            'url',
+            'id',
+            'title',
+            'slug',
+            'description',
+            'body',
+            'published',
+            'created',
+            'category'
+        )
+
+class PostSlugSerializer(serializers.ModelSerializer):
+    url = post_slug_url
     class Meta:
         model = Post
         fields = (

@@ -41,6 +41,7 @@ class PostSerializer(serializers.ModelSerializer):
             'title',
             'slug',
             'image',
+            'image_url',
             'description',
             'body',
             'published',

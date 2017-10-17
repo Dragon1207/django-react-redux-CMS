@@ -42,21 +42,21 @@ mysql create database <database-name>
 /<project-path>/server/djudo/settings.py
 //edit the Databases object, and fill out the appropriate information
 ```
-9. Change to the server directory and run the django server
-```
-cd /<project-path>/server; python manage.py runserver //the url is at http://localhost:8000
-```
-10. Migrate database
+9. Migrate database
 ```
 python manage.py migrate
 ```
-11. Run makemigrations, and your server will be setup
+10. Run makemigrations, and your server will be setup
 ```
 python manage.py makemigrations
 ```
-12. Create a super user (admin)
+11. Create a super user (admin)
 ```
 python manage.py createsuperuser
+```
+12. Change to the server directory and run the django server
+```
+cd /<project-path>/server; python manage.py runserver //the url is at http://localhost:8000
 ```
 13. Change to the client directory and run the install.
 ```

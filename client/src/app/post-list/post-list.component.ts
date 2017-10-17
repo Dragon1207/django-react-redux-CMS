@@ -15,6 +15,7 @@ import { AppState } from '@app/state';
 export class PostListComponent implements OnInit {
 
   posts$: Observable<Post[]>;
+  categories$: Observable<Category[]>;
 
   constructor(
     private store: Store<AppState>,
@@ -23,7 +24,9 @@ export class PostListComponent implements OnInit {
 
   ngOnInit() {
     this.store.dispatch(new LoadPostsAction());
+    this.store.dispatch(new LoadCategoriesAction());
     this.posts$ = this.store.select(PostsQuery.getPosts);
+    this.categories$ = this.store.select(PostsQuery.getCategories);
   }
 
   getPost(id: number) {

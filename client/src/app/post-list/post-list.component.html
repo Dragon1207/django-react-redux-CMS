@@ -6,13 +6,17 @@
   <div class="flex">
     <section class="flex-row flex-10">
         <div class="flex-column post-column">
-          <h1 class="flex-12">Posts</h1>
-          <div class="post-container flex-12" >
-            <mat-card class="post" *ngFor=" let post of posts$ | async " (click)="getPost(post.id)" >
-              <h2>{{ post.title }}</h2>
-              <h3>{{ post.description }}</h3>
-            </mat-card>
-          </div>
+          <ng-container *ngFor="let category of categories$ | async">
+            <h1 class="flex-12">{{ category.title }}</h1>
+            <div class="post-container flex-12" >
+              <ng-container *ngFor=" let post of posts$ | async ">
+                <mat-card class="post" *ngIf="post.category_obj.title == category.title" (click)="getPost(post.id)" >
+                    <h2>{{ post.title }}</h2>
+                    <h3>{{ post.description }}</h3>
+                  </mat-card>
+              </ng-container>
+            </div>
+          </ng-container>
         </div>
     </section>
   </div>

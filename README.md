@@ -87,4 +87,3 @@ ng build
 
 Features coming soon:
 - comments
-- post images

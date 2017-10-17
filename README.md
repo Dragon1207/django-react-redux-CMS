@@ -32,7 +32,9 @@ pip install -r requirements.txt
 ```
 7. Start MySQL
 ```
-mysql.server start
+mysql.server start;
+mysql -u root -p (enter mysql username and password)
+mysql create database <database-name>
 ```
 8. Configure the Database information
 ```

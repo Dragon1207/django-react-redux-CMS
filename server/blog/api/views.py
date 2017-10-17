@@ -36,8 +36,7 @@ class PostViewSet(generics.ListAPIView):
         query = self.request.GET.get("q")
         if query:
             queryset_list = queryset_list.filter(
-                    Q(title__icontains=query)|
-                    Q(category__icontains=query)
+                    Q(title__icontains=query)
                     ).distinct()
         return queryset_list
 

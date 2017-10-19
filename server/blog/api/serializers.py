@@ -77,9 +77,12 @@ class PostSlugSerializer(serializers.ModelSerializer):
             'id',
             'title',
             'slug',
+            'image',
+            'image_url',
             'description',
             'body',
             'published',
             'created',
-            'category'
+            'category_obj',
+            'comments'
         )

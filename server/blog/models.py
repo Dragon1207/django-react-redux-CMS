@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models import permalink
 from django.core.urlresolvers import reverse
+from comments.models import Comment
 
 # Create your models here.
 
@@ -52,6 +53,12 @@ class Post(models.Model):
 
     def get_api_url(self):
         return reverse("posts-api:detail", kwargs={"slug": self.slug})
+
+    @property
+    def comments(self):
+        instance = self
+        qs = Comment.objects.filter_by_instance(instance)
+        return qs
 
 class CategoryManager(models.Manager):
     def active(self, *args, **kwargs):

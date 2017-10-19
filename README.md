@@ -1,5 +1,5 @@
 # djudo
-Django + Angular CMS
+Django + Angular CMS + ngrx
 
 # Getting Started
 1. Make sure you have mysql, python, pip, node, and @angular/cli installed.

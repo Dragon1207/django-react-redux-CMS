@@ -4,8 +4,30 @@
 
 @import '../../components/header/header.scss';
 @import '../../components/home/home.scss';
+@import '../../components/footer/footer.scss';
 
 *{
    margin:0;
    padding:0;
+}
+
+html {
+  height: 100%;
+  body {
+    position: relative;
+    min-height: 100%;
+    background-color: $light-grey;
+    .content-container {
+      padding-bottom: 50px;
+      font-family: $roboto;
+      p {
+        @include pFontStack(18px, 300);
+        line-height: 30px;
+      }
+
+      .post-container {
+        width: 70%;
+      }
+    }
+  }
 }

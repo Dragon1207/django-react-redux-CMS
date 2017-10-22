@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Header } from './components/header/';
 import { Home } from './components/home/';
+import { Footer } from './components/footer/';
 import logo from './logo.svg';
 
 export class App extends Component {
@@ -8,7 +9,8 @@ export class App extends Component {
     return (
       <div className="App">
         <Header />
-        <Home/>
+        <Home />
+        <Footer />
       </div>
     );
   }

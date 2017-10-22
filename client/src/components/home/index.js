@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import timelapseFrameImg from '../../assets/images/built-for-speed-image/timelapse-frame.svg';
 import hybridImg from '../../assets/images/hybrid-app-image.svg';
 import allDevicesImg from '../../assets/images/djudo-tech-devices-image.svg';
@@ -26,7 +25,6 @@ const config = {
     '../../assets/images/djudo-tech-devices-image.svg'
   }
 }
-
 
 export function Home() {
   return (

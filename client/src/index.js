@@ -13,11 +13,11 @@ import registerServiceWorker from './registerServiceWorker';
 let appStore = createStore(BlogApp)
 
 ReactDOM.render(
-  <MuiThemeProvider>
-    <Provider store={appStore}>
+  <Provider store={appStore}>
+    <MuiThemeProvider>
       <App />
-    </Provider>,
-  </MuiThemeProvider>,
+    </MuiThemeProvider>
+  </Provider>,
   document.getElementById('root')
 );
 registerServiceWorker();

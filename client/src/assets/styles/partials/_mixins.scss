@@ -1,4 +1,4 @@
-@import '~assets/styles/variables';
+@import './variables';
 
 @mixin pFontStack($size, $weight) {
   font-family: $roboto;

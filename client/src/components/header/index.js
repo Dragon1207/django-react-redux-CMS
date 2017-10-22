@@ -20,7 +20,7 @@ export class Header extends React.Component {
           <MenuItem>Menu Item 2</MenuItem>
         </Drawer>
         <header>
-          <i onClick={this.handleToggle} class="material-icons menu">menu</i>
+          <i onClick={this.handleToggle} className={"material-icons menu"}>menu</i>
           <h1 className={'title'}>Djudo</h1>
           <h2>the next generation of cms</h2>
           <button>Get Started</button>

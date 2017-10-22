@@ -25,8 +25,8 @@ const config = {
 }
 
 
-function home() {
-  return render(
+export function Home() {
+  return (
     <section className={"home"} >
       <div className={"row-container flex flex-row"}>
         <div>

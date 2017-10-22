@@ -1,7 +1,11 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { render } from 'react-dom';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
+
+import { PostList } from '../posts/post-list/';
+import { App } from '../../App';
 
 export class Header extends React.Component {
 
@@ -15,11 +19,15 @@ export class Header extends React.Component {
   render() {
     return (
       <div>
-        <Drawer open={this.state.open}>
-          <i onClick={this.handleToggle} className={"material-icons"}>close</i>  
-          <MenuItem>Menu Item</MenuItem>
-          <MenuItem>Menu Item 2</MenuItem>
-        </Drawer>
+          <Drawer open={this.state.open}>
+            <i onClick={this.handleToggle} className={"material-icons"}>close</i>
+            <div>
+              <Link to="/">Home</Link>
+            </div>
+            <div>
+              <Link to="/posts">Posts</Link>
+            </div>
+          </Drawer>  
         <header>
           <i onClick={this.handleToggle} className={"material-icons menu"}>menu</i>
           <h1 className={'title'}>Djudo</h1>

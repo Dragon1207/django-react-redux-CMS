@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i|Roboto:100,200,300,400,700");
+* {
+  margin: 0;
+  padding: 0; }
+
+html body header {
+  height: 336px;
+  width: 100%;
+  background-color: #CF000F;
+  background: linear-gradient(145deg, #CF000F, #F22613);
+  font-family: Open Sans, sans-serif;
+  color: #FFFFFF;
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
+  margin-bottom: 100px; }
+  html body header .title {
+    cursor: pointer;
+    color: #FFFFFF;
+    position: relative;
+    font-size: 72px;
+    width: 100%;
+    top: 37%;
+    text-align: center;
+    font-weight: 400;
+    text-shadow: 0 2px 4px #4D4D4D; }
+    html body header .title:focus {
+      outline: 0; }
+  html body header p {
+    font-size: 24px;
+    text-align: center;
+    top: 40%;
+    position: relative;
+    width: 100%;
+    font-weight: 100;
+    text-shadow: 0 2px 4px #4D4D4D; }
+  html body header button {
+    border: none;
+    background: none;
+    width: 150px;
+    height: 35px;
+    padding: 0;
+    position: relative;
+    margin-top: 186px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    font: 14px Roboto, sans-serif;
+    font-weight: 700;
+    color: #CF000F;
+    cursor: pointer; }
+    html body header button:focus {
+      outline: 0; }
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,5 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
+import timelapseFrameImg from '../../assets/images/built-for-speed-image/timelapse-frame.svg';
+import hybridImg from '../../assets/images/hybrid-app-image.svg';
+import allDevicesImg from '../../assets/images/djudo-tech-devices-image.svg';
 
 const config = {
   speed: {
@@ -34,12 +37,12 @@ export function Home() {
           <div className={"speed-text description"} >{ config.speed.description }</div>
         </div>
         <div className={"speed-image-container scale"}>
-          <img src="config.speed.timelapseFrameImg" />
+          <img src={timelapseFrameImg} />
           <i className={"material-icons timelapse-icon"}>timelapse</i>
         </div>
       </div>
       <div className={"row-container flex flex-row"}>
-        <img className={"scale"} src="config.hybrid.img" />
+        <img className={"scale"} src={hybridImg} />
         <div>
           <div className={"hybrid-text label flex-6"} >{ config.hybrid.label }</div>
           <div className={"hybrid-text description flex-6"} >{ config.hybrid.description }</div>
@@ -50,7 +53,7 @@ export function Home() {
           <div className={"allDevices-text label flex-6"} >{ config.allDevices.label }</div>
           <div className={"allDevices-text description flex-6"} >{ config.allDevices.description }</div>
         </div>
-      <img className={"allDevices-img"} src="config.allDevices.img" />
+        <img className={"allDevices-img"} src={allDevicesImg} />
       </div>
     </section>
   )

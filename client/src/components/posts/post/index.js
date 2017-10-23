@@ -2,7 +2,7 @@ import React from 'react';
 
 export function Post(props) {
   return (
-    <div key={props.post.id}>
+    <div>
       <div className={'flex'}>
         <section className={'flex-row flex10'}>
           <div className={'flex-column post-column'}>

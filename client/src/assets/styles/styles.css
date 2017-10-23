@@ -61,6 +61,8 @@ header {
   color: #FFFFFF;
   box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
   margin-bottom: 100px; }
+  header .menu, header .close {
+    cursor: pointer; }
   header .title {
     cursor: pointer;
     color: #FFFFFF;
@@ -190,6 +192,12 @@ footer {
 * {
   margin: 0;
   padding: 0; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none; }
 
 html {
   height: 100%; }

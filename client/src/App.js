@@ -13,7 +13,6 @@ export class App extends Component {
 
   constructor() {
     super();
-    appStore.dispatch(loadPosts());
     this.state = { rehydrated: false };
   }
 

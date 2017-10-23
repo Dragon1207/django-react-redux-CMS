@@ -18,19 +18,19 @@ export class Header extends React.Component {
 
   render() {
     return (
-      <div>
-          <Drawer open={this.state.open}>
-            <i onClick={this.handleToggle} className={"material-icons"}>close</i>
+      <header>
+          <Drawer className={'drawer'} open={this.state.open}>
+            <i onClick={this.handleToggle} className={"material-icons close"}>close</i>
             <Link to="/"><MenuItem onClick={this.handleToggle}>Home</MenuItem></Link>
             <Link to="/posts"><MenuItem onClick={this.handleToggle}>Posts</MenuItem></Link>
           </Drawer>  
-        <header>
+        <div className={'header-container'}>
           <i onClick={this.handleToggle} className={"material-icons menu"}>menu</i>
           <Link to="/"><h1 className={'title'}>Djudo</h1></Link>
           <h2>the next generation of cms</h2>
           <button>Get Started</button>
-        </header>
-      </div>
+        </div>
+      </header>
     )
   }
 }

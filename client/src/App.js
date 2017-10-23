@@ -24,6 +24,9 @@ export class App extends Component {
   }
 
   render() {
+    if (!this.state.rehydrated) {
+      return <p>Loading...</p>;
+    }
     return (
       <div className="App">
         <Header />

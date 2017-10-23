@@ -1,4 +1,4 @@
-import { actionCreator } from '../modules/utils';
+import { actionCreator } from '../../modules/utils';
 
 export const CategoryActions = {
   LOAD_CATEGORIES: 'LOAD_CATEGORIES',

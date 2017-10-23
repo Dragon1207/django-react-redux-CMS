@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { loadPosts } from '../../../actions/post-actions';
-import { loadCategories } from '../../../actions/category-actions';
+import { loadPosts } from '../../../state/actions/post-actions';
+import { loadCategories } from '../../../state/actions/category-actions';
 import { appStore } from '../../../store';
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
-import { Post } from '../../../components/posts/post/';
-import CategoryPosts from '../../../components/posts/category-posts/';
+import { Post } from '../../components/post/index';
+import CategoryPosts from '../../components/category-posts/index';
 
 class PostList extends React.Component {
 

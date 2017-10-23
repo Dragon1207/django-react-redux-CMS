@@ -1,7 +1,7 @@
 import React from 'react';
-import timelapseFrameImg from '../../../assets/images/built-for-speed-image/timelapse-frame.svg';
-import hybridImg from '../../../assets/images/hybrid-app-image.svg';
-import allDevicesImg from '../../../assets/images/djudo-tech-devices-image.svg';
+import timelapseFrameImg from '../../assets/images/built-for-speed-image/timelapse-frame.svg';
+import hybridImg from '../../assets/images/hybrid-app-image.svg';
+import allDevicesImg from '../../assets/images/djudo-tech-devices-image.svg';
 
 const config = {
   speed: {

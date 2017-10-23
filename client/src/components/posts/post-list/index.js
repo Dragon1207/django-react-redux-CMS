@@ -4,17 +4,12 @@ import { loadPosts } from '../../../actions/post-actions';
 import { appStore } from '../../../store';
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 
-const { posts } = appStore.getState();
-
 export class PostList extends React.Component {
+
+  postList;
 
   constructor(props) {
     super(props);
-  }
-
-  componentWillMount() {
-    const { posts } = appStore.getState();
-    console.log(posts.list);
   }
 
   componentDidCatch(err) {
@@ -22,8 +17,14 @@ export class PostList extends React.Component {
   }
 
   render() {
+    const postState = appStore.getState().posts.list;
+    if (postState) {
+      this.postList = postState.map(post => <li key={post.id} >{post.title}</li>);
+    }
+    console.log(postState)
     return (
       <div>
+        {this.postList}
       </div>
     )
   }

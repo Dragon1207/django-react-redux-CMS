@@ -9,10 +9,12 @@ import { Footer } from './components/footer/';
 import { PostList } from './components/posts/post-list/'
 
 export class App extends Component {
+
   constructor() {
     super();
     appStore.dispatch(loadPosts());
   }
+
   render() {
     return (
       <div className="App">

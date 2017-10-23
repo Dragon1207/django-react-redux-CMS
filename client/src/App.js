@@ -7,7 +7,7 @@ import { appStore } from './store';
 import Header from './components/header/';
 import { Home } from './components/home/';
 import Footer from './components/footer/';
-import PostList from './components/posts/post-list/'
+import PostList from './containers/posts/post-list/'
 
 export class App extends Component {
 

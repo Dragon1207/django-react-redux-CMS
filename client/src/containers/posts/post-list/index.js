@@ -4,8 +4,8 @@ import { loadPosts } from '../../../actions/post-actions';
 import { loadCategories } from '../../../actions/category-actions';
 import { appStore } from '../../../store';
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
-import { Post } from '../post/';
-import CategoryPosts from '../category-posts/';
+import { Post } from '../../../components/posts/post/';
+import CategoryPosts from '../../../components/posts/category-posts/';
 
 class PostList extends React.Component {
 
@@ -23,7 +23,8 @@ class PostList extends React.Component {
 
     this.categoryState.map(category => {
       this.categories.push({
-        title: <h1 key={category.id}>{category.title}</h1>,
+        id: category.id,
+        title: <div key={category.id}>{category.title}</div>,
         posts: []
       })
       this.postState.map(post => {

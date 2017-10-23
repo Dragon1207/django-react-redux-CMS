@@ -24,7 +24,7 @@ export function TimeLapseImg() {
 
 export function Row(props) {
 	return (
-		<div className={"row-container " + props.class}>
+		<div className={`row-container ${props.class}`}>
 			{props.children}
 		</div>
 	)

@@ -8,7 +8,9 @@ import { Post } from '../post/';
 
 export class PostList extends React.Component {
 
-  postList;
+  postState = appStore.getState().posts.list;
+  categoryState = appStore.getState().categories.list;
+  categories = [];
 
   constructor(props) {
     super(props);
@@ -17,27 +19,25 @@ export class PostList extends React.Component {
   }
 
   render() {
-    const postState = appStore.getState().posts.list;
-    const categoryState = appStore.getState().categories.list;
-    let categories = []
 
-    for (const category of categoryState) {
-      categories.push({
+    this.categoryState.map(category => {
+      this.categories.push({
         title: <h1 key={category.id}>{category.title}</h1>,
         posts: []
       })
-      for (const post of postState) {
-        for (const item of categories) {
-          item.posts.push(category.title == post.category_obj.title
-            ? <Post key={post.id} post={post} /> : '')
-        }
-      }
-    }
+      this.postState.map(post => {
+        this.categories.map(item => {
+          if (category.title == post.category_obj.title) {
+            item.posts.push(<Post key={post.id} post={post} />)
+          }
+        })
+      })
+    })
 
     return (
       <section className={'post-list-container'}>
         <div>
-          {categories.map(category => (
+          {this.categories.map(category => (
             <div>
               <h1>{category.title}</h1>
               <div>{category.posts.map(post => post)}</div>

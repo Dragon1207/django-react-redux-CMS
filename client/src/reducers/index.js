@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { postsReducer } from './posts-reducer' 
 
-export const BlogApp = combineReducers({
+export const rootReducer = combineReducers({
   posts: postsReducer
 })

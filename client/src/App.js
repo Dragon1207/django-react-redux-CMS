@@ -4,10 +4,10 @@ import { persistStore } from 'redux-persist';
 
 import { loadPosts } from './actions/post-actions';
 import { appStore } from './store';
-import { Header } from './components/header/';
+import Header from './components/header/';
 import { Home } from './components/home/';
-import { Footer } from './components/footer/';
-import { PostList } from './components/posts/post-list/'
+import Footer from './components/footer/';
+import PostList from './components/posts/post-list/'
 
 export class App extends Component {
 

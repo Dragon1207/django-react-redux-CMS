@@ -7,7 +7,7 @@ import MenuItem from 'material-ui/MenuItem';
 import { PostList } from '../posts/post-list/';
 import { App } from '../../App';
 
-export class Header extends React.Component {
+class Header extends React.Component {
 
   constructor(props) {
     super(props);
@@ -34,3 +34,5 @@ export class Header extends React.Component {
     )
   }
 }
+
+export default Header

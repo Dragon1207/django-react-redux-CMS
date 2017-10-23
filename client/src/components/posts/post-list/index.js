@@ -5,8 +5,9 @@ import { loadCategories } from '../../../actions/category-actions';
 import { appStore } from '../../../store';
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import { Post } from '../post/';
+import CategoryPosts from '../category-posts/';
 
-export class PostList extends React.Component {
+class PostList extends React.Component {
 
   postState = appStore.getState().posts.list;
   categoryState = appStore.getState().categories.list;
@@ -35,16 +36,9 @@ export class PostList extends React.Component {
     })
 
     return (
-      <section className={'post-list-container'}>
-        <div>
-          {this.categories.map(category => (
-            <div>
-              <h1>{category.title}</h1>
-              <div>{category.posts.map(post => post)}</div>
-            </div>
-          ))}
-        </div>
-      </section>
+      <CategoryPosts categories={this.categories} />
     )
   }
 }
+
+export default PostList

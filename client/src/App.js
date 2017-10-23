@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom'
+import { persistStore } from 'redux-persist';
 
 import { loadPosts } from './actions/post-actions';
 import { appStore } from './store';
@@ -13,6 +14,13 @@ export class App extends Component {
   constructor() {
     super();
     appStore.dispatch(loadPosts());
+    this.state = { rehydrated: false };
+  }
+
+  componentWillMount() {
+    persistStore(appStore, {}, () => {
+      this.setState({ rehydrated: true });
+    });
   }
 
   render() {

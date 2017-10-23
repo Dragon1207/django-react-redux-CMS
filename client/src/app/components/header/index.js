@@ -4,7 +4,7 @@ import { render } from 'react-dom';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 
-import PostList from '../../containers/posts/post-list/';
+import PostList from '../../containers/posts/post-list/index';
 import { App } from '../../App';
 
 function Icon(props) {

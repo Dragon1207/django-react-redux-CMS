@@ -9,8 +9,8 @@ import registerServiceWorker from './registerServiceWorker';
 
 import './index.css';
 import './assets/styles/styles.css';
-import { App } from './App';
-import { appStore } from './store';
+import { App } from './app/App';
+import { appStore } from './app/store';
 
 ReactDOM.render(
   <Provider store={appStore}>

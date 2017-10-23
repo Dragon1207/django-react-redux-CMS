@@ -2,10 +2,10 @@
 @import './partials/mixins';
 @import './partials/grid';
 
-@import '../../components/header/header.scss';
-@import '../../components/home/home.scss';
-@import '../../components/footer/footer.scss';
-@import '../../components/posts/post-list/post-list.scss';
+@import '../../app/components/header/header.scss';
+@import '../../app/components/home/home.scss';
+@import '../../app/components/footer/footer.scss';
+@import '../../app/components/posts/post-list/post-list.scss';
 
 *{
    margin:0;

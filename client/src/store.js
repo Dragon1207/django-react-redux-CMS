@@ -9,4 +9,5 @@ import { epicMiddleware } from './epics/';
 //   applyMiddleware(epicMiddleware)
 // );
 
-export const appStore = compose(autoRehydrate())(createStore)(rootReducer, applyMiddleware(epicMiddleware));
+export const appStore = compose(autoRehydrate())
+  (createStore)(rootReducer, applyMiddleware(epicMiddleware));

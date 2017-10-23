@@ -19,19 +19,30 @@ export class PostList extends React.Component {
   render() {
     const postState = appStore.getState().posts.list;
     const categoryState = appStore.getState().categories.list;
+    let categories = []
+
+    for (const category of categoryState) {
+      categories.push({
+        title: <h1 key={category.id}>{category.title}</h1>,
+        posts: []
+      })
+      for (const post of postState) {
+        for (const item of categories) {
+          item.posts.push(category.title == post.category_obj.title
+            ? <Post key={post.id} post={post} /> : '')
+        }
+      }
+    }
+
     return (
       <section className={'post-list-container'}>
         <div>
-          {
-            categoryState ? categoryState.map(category => <h1 key={category.id}>{category.title}</h1>)
-              : <p>No categories</p>  
-          }
-          <div>
-            {
-              postState ? postState.map(post => <Post key={post.id} post={post} />)
-                : <p>No posts to show.</p>
-            }
-          </div>
+          {categories.map(category => (
+            <div>
+              <h1>{category.title}</h1>
+              <div>{category.posts.map(post => post)}</div>
+            </div>
+          ))}
         </div>
       </section>
     )

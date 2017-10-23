@@ -19,7 +19,14 @@ export class PostList extends React.Component {
   render() {
     const postState = appStore.getState().posts.list;
     if (postState) {
-      this.postList = postState.map(post => <li key={post.id} >{post.title}</li>);
+      this.postList = postState.map(post =>
+        <Card key={post.id} >
+          <CardHeader>  
+            <h1>{post.title}</h1>
+            <h2>{post.description}</h2>
+          </CardHeader>  
+        </Card>
+      );
     }
     console.log(postState)
     return (

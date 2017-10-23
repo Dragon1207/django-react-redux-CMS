@@ -26,7 +26,7 @@ export class Header extends React.Component {
           </Drawer>  
         <header>
           <i onClick={this.handleToggle} className={"material-icons menu"}>menu</i>
-          <h1 className={'title'}>Djudo</h1>
+          <Link to="/"><h1 className={'title'}>Djudo</h1></Link>
           <h2>the next generation of cms</h2>
           <button>Get Started</button>
         </header>

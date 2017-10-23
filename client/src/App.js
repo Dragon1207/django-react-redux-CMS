@@ -19,10 +19,12 @@ export class App extends Component {
     return (
       <div className="App">
         <Header />
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/posts' component={PostList} />
-          </Switch>
+          <div className={"content-container"}>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/posts' component={PostList} />
+            </Switch>
+          </div>
         <Footer />
       </div>
     );

@@ -15,25 +15,28 @@ function actionCreator(type, payload) {
 }
 
 export const loadPosts = () => {
-  actionCreator(PostActions.LOAD_POSTS);
+  return actionCreator(PostActions.LOAD_POSTS);
 }
 
 export const loadPostsSuccess = posts => {
-  actionCreator(PostActions.LOAD_POSTS_SUCCESS, posts);
+  return {
+    type: PostActions.LOAD_POSTS_SUCCESS,
+    payload: posts
+  }
 }
 
 export const getPostDetail = id => {
-  actionCreator(PostActions.GET_POST_DETAIL, id);
+  return actionCreator(PostActions.GET_POST_DETAIL, id);
 }
 
 export const getPostDetailSuccess = post => {
-  actionCreator(PostActions.GET_POST_DETAIL_SUCCESS, post);
+  return actionCreator(PostActions.GET_POST_DETAIL_SUCCESS, post);
 }
 
 export const loadCategories = () => {
-  actionCreator(PostActions.LOAD_CATEGORIES);
+  return actionCreator(PostActions.LOAD_CATEGORIES);
 }
 
 export const loadCategoriesSuccess = categories => {
-  actionCreator(PostActions.LOAD_CATEGORIES_SUCCESS, categories);
+  return actionCreator(PostActions.LOAD_CATEGORIES_SUCCESS, categories);
 }

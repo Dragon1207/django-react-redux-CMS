@@ -3,11 +3,11 @@ import { PostActions } from '../actions/post-actions';
 export const postsReducer = (state = [], action) => {
   switch (action.type) {
     case PostActions.LOAD_POSTS_SUCCESS:
-      return { ...state, payload: action.posts }
+      return { ...state, posts: action.payload }
     case PostActions.LOAD_CATEGORIES_SUCCESS:
-      return { ...state, payload: action.categories }  
+      return { ...state, categories: action.payload }  
     case PostActions.GET_POST_DETAIL_SUCCESS:
-      return { ...state, payload: action.post }  
+      return { ...state, id: action.payload }  
     default:
       return state 
   }

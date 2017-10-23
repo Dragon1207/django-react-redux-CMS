@@ -10,7 +10,6 @@ import registerServiceWorker from './registerServiceWorker';
 import './index.css';
 import './assets/styles/styles.css';
 import { App } from './App';
-import { PostList } from './components/posts/post-list/'
 import { appStore } from './store';
 
 ReactDOM.render(

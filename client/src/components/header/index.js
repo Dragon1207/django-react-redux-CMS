@@ -21,12 +21,8 @@ export class Header extends React.Component {
       <div>
           <Drawer open={this.state.open}>
             <i onClick={this.handleToggle} className={"material-icons"}>close</i>
-            <div>
-              <Link to="/">Home</Link>
-            </div>
-            <div>
-              <Link to="/posts">Posts</Link>
-            </div>
+            <Link to="/"><MenuItem>Home</MenuItem></Link>
+            <Link to="/posts"><MenuItem>Posts</MenuItem></Link>
           </Drawer>  
         <header>
           <i onClick={this.handleToggle} className={"material-icons menu"}>menu</i>

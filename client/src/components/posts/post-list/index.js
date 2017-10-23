@@ -8,26 +8,23 @@ const { posts } = appStore.getState();
 
 export class PostList extends React.Component {
 
-  posts;
-  subscription;
-
   constructor(props) {
     super(props);
   }
 
-  componentDidMount() {
-    appStore.dispatch(loadPosts());
-    this.posts = appStore.getState();
-    console.log(this.posts);
+  componentWillMount() {
+    const { posts } = appStore.getState();
+    console.log(posts.list);
+  }
+
+  componentDidCatch(err) {
+    console.log(err)
   }
 
   render() {
     return (
-      <Card >
-        <CardHeader>
-          <pre>{appStore.getState(posts).toString()}</pre>
-        </CardHeader>
-      </Card>
+      <div>
+      </div>
     )
   }
 }

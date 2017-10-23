@@ -18,12 +18,12 @@ export const loadPosts = () => {
   return actionCreator(PostActions.LOAD_POSTS);
 }
 
-export const loadPostsSuccess = posts => {
-  return {
+export const loadPostsSuccess = posts => (
+  {
     type: PostActions.LOAD_POSTS_SUCCESS,
     payload: posts
   }
-}
+)
 
 export const getPostDetail = id => {
   return actionCreator(PostActions.GET_POST_DETAIL, id);

@@ -1,20 +1,14 @@
 import React from 'react';
 
-export function Post(props) {
-  return (
-    <div>
-      <div className={'flex'}>
-        <section className={'flex-row flex10'}>
-          <div className={'flex-column post-column'}>
-            <div className={'post-container flex-12'}>
-              <div className={'post'}>
-                <h2>{props.post.title}</h2>
-                <h3>{props.post.description}</h3>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-    </div>
-  )
+export function Post(props, {onPostClick}) {
+	return (
+		<section className={'flex-row flex10'}>
+			<div className={'flex-column post-column post-container'}>
+				<div className={'post'}>
+					<h2>{props.post.title}</h2>
+					<h3>{props.post.description}</h3>
+				</div>
+			</div>
+		</section>
+	)
 }

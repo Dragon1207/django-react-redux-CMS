@@ -1,6 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
-import { loadPosts } from '../../../state/actions/post-actions';
+import { loadPosts, getPostDetail } from '../../../state/actions/post-actions';
 import { loadCategories } from '../../../state/actions/category-actions';
 import { appStore } from '../../../store';
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
@@ -39,6 +39,12 @@ class PostList extends React.Component {
     return (
       <CategoryPosts categories={this.categories} />
     )
+  }
+}
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onPostClick: id => dispatch(getPostDetail(id))
   }
 }
 

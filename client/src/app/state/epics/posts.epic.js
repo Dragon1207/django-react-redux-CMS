@@ -1,4 +1,4 @@
-import { PostActions, loadPostsSuccess } from '../actions/post-actions';
+import { PostActions, loadPostsSuccess, getPostDetailSuccess } from '../actions/post-actions';
 import 'rxjs/add/operator/mergeMap';
 import 'rxjs/add/operator/map';
 import { ApiFacade } from '../../modules/api.facade';
@@ -9,4 +9,11 @@ export const postsEpic = action$ => action$
   .mergeMap(action =>
     api.get('posts')
       .map(res => loadPostsSuccess(res))
-  );
+);
+  
+export const postDetailEpic = action$ => action$
+  .ofType(PostActions.GET_POST_DETAIL)
+  .mergeMap(action =>
+    api.get(`posts/${action.payload}`)
+    .map(res => getPostDetailSuccess(res))
+);

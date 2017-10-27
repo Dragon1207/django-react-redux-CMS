@@ -15,7 +15,7 @@ class PostDetail extends Component {
   }
 
   render() {
-    let post = appStore.getState().posts.detail;
+    const { post } = this.props;
     return (
       <h1>{post.title}</h1>
     )
@@ -23,9 +23,10 @@ class PostDetail extends Component {
 }
 
 function mapStateToProps(state) {
-  const { detail } = state;
+  const { posts } = state || {};
+  const { post } = posts;
   return {
-    detail
+    post
   }
 }
 

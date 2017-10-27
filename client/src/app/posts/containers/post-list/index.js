@@ -7,11 +7,10 @@ import { appStore } from '../../../store';
 import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
 import { Post } from '../../components/post/index';
 import CategoryPosts from '../../components/category-posts/index';
+import { Link } from 'react-router-dom';
 
 class PostList extends React.Component {
 
-  postState = appStore.getState().posts.list;
-  categoryState = appStore.getState().categories.list;
   categories = [];
 
   constructor(props) {
@@ -20,21 +19,28 @@ class PostList extends React.Component {
 
   componentDidMount() {
     const { dispatch } = this.props;
-    appStore.dispatch(loadPosts());
-    appStore.dispatch(loadCategories());
+    dispatch(loadPosts());
   }
 
   render() {
+    const { list, loading, post } = this.props
     return (
-      this.postState.map(post => <Post key={post.id} post={post} />)
+      list.map(post => (
+        <Link to={`/posts/${post.id}`}>
+          <Post key={post.id} post={post} />  
+        </Link>  
+      ))
     )
   }
 }
 
 const mapStateToProps = state => {
   const { posts } = state;
+  const { post, loading, list } = posts;
   return {
-    posts
+    loading,
+    list,
+    post
   }
 }
 

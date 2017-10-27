@@ -19,6 +19,6 @@ export const getPostDetail = id => {
   return actionCreator(PostActions.GET_POST_DETAIL, id);
 }
 
-export const getPostDetailSuccess = post => {
-  return actionCreator(PostActions.GET_POST_DETAIL_SUCCESS, post);
+export const getPostDetailSuccess = detail => {
+  return actionCreator(PostActions.GET_POST_DETAIL_SUCCESS, detail);
 }

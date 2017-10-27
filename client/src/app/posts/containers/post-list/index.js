@@ -1,5 +1,6 @@
 import React from 'react';
 import { render } from 'react-dom';
+import { connect } from 'react-redux';
 import { loadPosts, getPostDetail } from '../../../state/actions/post-actions';
 import { loadCategories } from '../../../state/actions/category-actions';
 import { appStore } from '../../../store';
@@ -15,37 +16,26 @@ class PostList extends React.Component {
 
   constructor(props) {
     super(props);
+  }
+
+  componentDidMount() {
+    const { dispatch } = this.props;
     appStore.dispatch(loadPosts());
     appStore.dispatch(loadCategories());
   }
 
   render() {
-
-    this.categoryState.map(category => {
-      this.categories.push({
-        id: category.id,
-        title: <div key={category.id}>{category.title}</div>,
-        posts: []
-      })
-      this.postState.map(post => {
-        this.categories.map(item => {
-          if (category.title == post.category_obj.title) {
-            item.posts.push(<Post key={post.id} post={post} />)
-          }
-        })
-      })
-    })
-
     return (
-      <CategoryPosts categories={this.categories} />
+      this.postState.map(post => <Post key={post.id} post={post} />)
     )
   }
 }
 
-const mapDispatchToProps = dispatch => {
+const mapStateToProps = state => {
+  const { posts } = state;
   return {
-    onPostClick: id => dispatch(getPostDetail(id))
+    posts
   }
 }
 
-export default PostList
+export default connect(mapStateToProps)(PostList)

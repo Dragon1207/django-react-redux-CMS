@@ -5,7 +5,7 @@ export const postsReducer = (state = [], action) => {
     case PostActions.LOAD_POSTS_SUCCESS:
       return { ...state, list: action.payload }
     case PostActions.GET_POST_DETAIL_SUCCESS:
-      return { ...state, id: action.payload }  
+      return { ...state, detail: action.payload }  
     default:
       return state 
   }

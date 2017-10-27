@@ -6,7 +6,8 @@ import {appStore} from './store';
 import Header from './header/';
 import {Home} from './home/';
 import Footer from './footer/';
-import PostList from './posts/containers/post-list/'
+import PostList from './posts/containers/post-list/';
+import Posts from './posts/'
 
 export class App extends Component {
 
@@ -31,7 +32,7 @@ export class App extends Component {
 				<div className={"content-container"}>
 					<Switch>
 						<Route exact path='/' component={Home}/>
-						<Route path='/posts' component={PostList}/>
+						<Route path='/posts' component={Posts}/>
 					</Switch>
 				</div>
 				<Footer/>

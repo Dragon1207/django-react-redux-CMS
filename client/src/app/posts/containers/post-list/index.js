@@ -11,15 +11,12 @@ import { Link } from 'react-router-dom';
 
 class PostList extends React.Component {
 
-  categories = [];
-
   constructor(props) {
     super(props);
   }
 
   componentDidMount() {
-    const { dispatch } = this.props;
-    dispatch(loadPosts());
+    this.props.dispatch(loadPosts());
   }
 
   render() {

@@ -17,7 +17,7 @@ class PostList extends React.Component {
   }
 
   render() {
-    const { list, loading, post } = this.props
+    const { list, loading } = this.props
     return (
       list.map(post => (
         <Link to={`/posts/${post.id}`}>
@@ -33,8 +33,7 @@ const mapStateToProps = state => {
   const { post, loading, list } = posts;
   return {
     loading,
-    list,
-    post
+    list
   }
 }
 

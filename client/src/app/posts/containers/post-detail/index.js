@@ -15,18 +15,23 @@ class PostDetail extends Component {
   }
 
   render() {
-    const { post } = this.props;
-    return (
-      <h1>{post.title}</h1>
-    )
+    const { post, loading } = this.props;
+    if (loading) {
+      return <p>loading...</p>
+    } else {
+      return (
+        <h1>{post.title}</h1>
+      )
+    }
   }
 }
 
 function mapStateToProps(state) {
   const { posts } = state || {};
-  const { post } = posts;
+  const { post, loading } = posts;
   return {
-    post
+    post,
+    loading
   }
 }
 

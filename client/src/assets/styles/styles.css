@@ -271,6 +271,11 @@ footer {
           font-weight: 100; }
     .post-detail-container .post-body mat-card p {
       color: #757575; }
+  .post-detail-container .post-detail-comments {
+    margin-top: 25px;
+    text-align: center; }
+    .post-detail-container .post-detail-comments > div:nth-child(1) {
+      padding: 25px; }
 
 * {
   margin: 0;

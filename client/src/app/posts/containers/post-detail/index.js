@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
-import * as moment from  'moment';
+import { Card } from 'material-ui/Card';
+import * as moment from 'moment';
+
 import { getPostDetail } from '../../../state/actions/post-actions';
 import { appStore } from '../../../store';
+import DjudoComments from '../../components/comments';
 
 class PostDetail extends Component {
 
@@ -43,6 +45,10 @@ class PostDetail extends Component {
               <p>{post.body}</p>
             </div>
           </Card>
+
+          <div className='post-detail-comments'>
+            <DjudoComments id={post.id} />
+          </div>
         </section>
       )
     }

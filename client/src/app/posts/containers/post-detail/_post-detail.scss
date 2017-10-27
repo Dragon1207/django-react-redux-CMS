@@ -40,4 +40,12 @@
       }
     }
   }
+
+  .post-detail-comments {
+    margin-top: 25px;
+    text-align: center;
+    > div:nth-child(1) {
+      padding: 25px;
+    }
+  }
 }

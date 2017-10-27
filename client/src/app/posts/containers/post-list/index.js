@@ -1,13 +1,10 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { connect } from 'react-redux';
-import { loadPosts, getPostDetail } from '../../../state/actions/post-actions';
-import { loadCategories } from '../../../state/actions/category-actions';
-import { appStore } from '../../../store';
-import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
-import { Post } from '../../components/post/index';
-import CategoryPosts from '../../components/category-posts/index';
 import { Link } from 'react-router-dom';
+import { loadPosts } from '../../../state/actions/post-actions';
+import { appStore } from '../../../store';
+import { Post } from '../../components/post/index';
 
 class PostList extends React.Component {
 

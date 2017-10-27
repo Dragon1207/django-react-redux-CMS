@@ -5,7 +5,8 @@
 @import '../../app/header/header.scss';
 @import '../../app/home/home.scss';
 @import '../../app/footer/footer.scss';
-@import '../../app/posts/post-list/post-list.scss';
+@import '../../app/posts/containers/post-list/post-list.scss';
+@import '../../app/posts/containers/post-detail/post-detail.scss';
 
 *{
    margin:0;
@@ -27,7 +28,9 @@ html {
     min-height: 100%;
     background-color: $light-grey;
     .content-container {
-      padding-bottom: 50px;
+      width: 75%;
+      margin: auto;
+      padding-bottom: 100px;
       font-family: $roboto;
       p {
         @include pFontStack(18px, 300);

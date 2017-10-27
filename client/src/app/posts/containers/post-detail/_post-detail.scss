@@ -1,0 +1,43 @@
+@import '../../../../assets/styles/partials/grid';
+@import '../../../../assets/styles/partials/mixins';
+@import '../../../../assets/styles/partials/variables';
+
+.post-detail-container {
+  width: 80%;
+  margin: auto;
+    .post-body {
+      white-space: pre-line;
+      padding: 25px;
+
+    .post-header-container {
+      margin-bottom: 3%;
+      position: relative;
+      .post-title {
+        color: $night-black;
+        font-size: 40px;
+        font-weight: 300;
+      }
+      .post-info {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        text-align: right;
+        color: $grey;
+        justify-content: flex-end;
+        span {
+          font-weight: 500;
+          margin-right: 10px;
+          align-self: center;
+        }
+        p {
+          font-weight: 100;
+        }
+      }
+    }
+    mat-card {
+      p {
+        color: $grey;
+      }
+    }
+  }
+}

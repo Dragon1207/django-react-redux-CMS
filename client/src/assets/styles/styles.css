@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i|Roboto:100,200,300,400,700");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i|Roboto:100,200,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i|Roboto:100,200,300,400,700");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i|Roboto:100,200,300,400,700");
 @keyframes cardHover {
   from {
     color: #757575; }
@@ -189,6 +191,87 @@ footer {
         font-family: Roboto, sans-serif;
         color: #757575; }
 
+.flex, .flex-row, .flex-column {
+  display: flex;
+  justify-content: space-between; }
+
+.flex-row {
+  flex-direction: row; }
+
+.flex-column {
+  flex-direction: column; }
+
+.flex-1 {
+  flex: 1; }
+
+.flex-2 {
+  flex: 2; }
+
+.flex-3 {
+  flex: 3; }
+
+.flex-4 {
+  flex: 4; }
+
+.flex-5 {
+  flex: 5; }
+
+.flex-6 {
+  flex: 6; }
+
+.flex-7 {
+  flex: 7; }
+
+.flex-8 {
+  flex: 8; }
+
+.flex-9 {
+  flex: 9; }
+
+.flex-10 {
+  flex: 10; }
+
+.flex-11 {
+  flex: 11; }
+
+.flex-12 {
+  flex: 12; }
+
+@keyframes cardHover {
+  from {
+    color: #757575; }
+  to {
+    box-shadow: -1px 4px 8px #656565;
+    color: #000000; } }
+.post-detail-container {
+  width: 80%;
+  margin: auto; }
+  .post-detail-container .post-body {
+    white-space: pre-line;
+    padding: 25px; }
+    .post-detail-container .post-body .post-header-container {
+      margin-bottom: 3%;
+      position: relative; }
+      .post-detail-container .post-body .post-header-container .post-title {
+        color: #656565;
+        font-size: 40px;
+        font-weight: 300; }
+      .post-detail-container .post-body .post-header-container .post-info {
+        position: relative;
+        right: 0;
+        bottom: 0;
+        text-align: right;
+        color: #757575;
+        justify-content: flex-end; }
+        .post-detail-container .post-body .post-header-container .post-info span {
+          font-weight: 500;
+          margin-right: 10px;
+          align-self: center; }
+        .post-detail-container .post-body .post-header-container .post-info p {
+          font-weight: 100; }
+    .post-detail-container .post-body mat-card p {
+      color: #757575; }
+
 * {
   margin: 0;
   padding: 0; }
@@ -206,7 +289,9 @@ html {
     min-height: 100%;
     background-color: #FEFEFE; }
     html body .content-container {
-      padding-bottom: 50px;
+      width: 75%;
+      margin: auto;
+      padding-bottom: 100px;
       font-family: Roboto, sans-serif; }
       html body .content-container p {
         font-family: Roboto, sans-serif;

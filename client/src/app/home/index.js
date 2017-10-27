@@ -7,15 +7,15 @@ import { Row, RowText, TimeLapseImg } from './components/rows';
 
 export function Home() {
   return (
-    <section className={"home"} >
-      <Row class={"flex-row"}>
+    <section className={'home'} >
+      <Row class={'flex-row'}>
         <RowText
           label={config.speed.label}
           desc={config.speed.description} />
         <TimeLapseImg/>
       </Row>
-      <Row class={"flex-row"}>
-        <img className={"scale"} src={hybridImg} />
+      <Row class={'flex-row'}>
+        <img alt='hybrid app' className={'scale'} src={hybridImg} />
         <RowText
           label={config.hybrid.label}
           desc={config.hybrid.description}/>
@@ -24,7 +24,7 @@ export function Home() {
         <RowText
           label={config.allDevices.label}
           desc={config.allDevices.description}/>
-        <img className={"allDevices-img"} src={allDevicesImg} />
+        <img alt='for-all-devices' className={'allDevices-img'} src={allDevicesImg} />
       </Row>
     </section>
   )

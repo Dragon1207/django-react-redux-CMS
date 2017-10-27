@@ -7,6 +7,4 @@ import { epicMiddleware } from './state/epics/';
 
 const loggerMiddleware = createLogger()
 
-export const appStore = compose(autoRehydrate())
-  (createStore)(rootReducer,
-   applyMiddleware(epicMiddleware, loggerMiddleware));
+export const appStore = compose(autoRehydrate())(createStore)(rootReducer, applyMiddleware(epicMiddleware, loggerMiddleware));

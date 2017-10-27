@@ -12,7 +12,7 @@ function RowDesc(props) {
 export function TimeLapseImg() {
 	return (
 		<div className={"speed-image-container scale"}>
-			<img src={timelapseFrameImg} />
+			<img alt='built-for-speed' src={timelapseFrameImg} />
 			<i className={"material-icons timelapse-icon"}>timelapse</i>
 		</div>
 	)

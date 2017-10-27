@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Card, CardActions, CardHeader, CardMedia, CardTitle, CardText } from 'material-ui/Card';
+import * as moment from  'moment';
 import { getPostDetail } from '../../../state/actions/post-actions';
 import { appStore } from '../../../store';
 
@@ -20,7 +22,28 @@ class PostDetail extends Component {
       return <p>loading...</p>
     } else {
       return (
-        <h1>{post.title}</h1>
+        <section className='post-detail-container'>
+          <Card>
+            <div className='post-body'>
+              <div className='flex post-header-container '>
+                <div className='flex-9'>
+                  <h1 className='post-title'>{post.title}</h1>
+                </div>
+                <div className='flex-3 post-info flex flex-column'>
+                  <div className='flex-row'>
+                    <span className='flex-3'>Published:</span>
+                    <p>{moment(post.created).format('L')}</p>
+                  </div>
+                  <div className='flex-row'>
+                    <span className='flex-3'>Category:</span>
+                    <p>{post.category_obj.title}</p>
+                  </div>
+                </div>
+              </div>
+              <p>{post.body}</p>
+            </div>
+          </Card>
+        </section>
       )
     }
   }

@@ -27,8 +27,10 @@ export function HeaderComponent(props) {
 			<Menu handleToggle={props.handleToggle} open={props.open}/>
 			<div className={'header-container'}>
 				<Icon handleToggle={props.handleToggle} name={'menu'}/>
-				<Link to="/"><h1 className={'title'}>Djudo</h1></Link>
-				<h2>the next generation of cms</h2>
+				<div className='header-text'>
+					<Link to="/"><h1 className={'title'}>Djudo</h1></Link>
+					<h2>the next generation of cms</h2>
+				</div>
 				<button>Get Started</button>
 			</div>
 		</header>

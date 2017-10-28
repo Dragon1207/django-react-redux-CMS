@@ -6,6 +6,7 @@ import * as moment from 'moment';
 import { getPostDetail } from '../../../state/actions/post-actions';
 import { appStore } from '../../../store';
 import DjudoComments from '../../components/comments';
+import Loading from '../../../spinner';
 
 class PostDetail extends Component {
 
@@ -21,7 +22,7 @@ class PostDetail extends Component {
   render() {
     const { post, loading } = this.props;
     if (loading) {
-      return <p>loading...</p>
+      return <Loading />
     } else {
       return (
         <section className='post-detail-container'>
@@ -45,7 +46,6 @@ class PostDetail extends Component {
               <p>{post.body}</p>
             </div>
           </Card>
-
           <div className='post-detail-comments'>
             <DjudoComments id={post.id} />
           </div>

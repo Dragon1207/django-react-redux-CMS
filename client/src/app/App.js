@@ -3,10 +3,11 @@ import {Switch, Route} from 'react-router-dom'
 import {persistStore} from 'redux-persist';
 
 import {appStore} from './store';
-import Header from './header/';
-import {Home} from './home/';
-import Footer from './footer/';
-import Posts from './posts/'
+import Header from './header';
+import {Home} from './home';
+import Footer from './footer';
+import Posts from './posts'
+import Loading from './spinner';
 
 export class App extends Component {
 
@@ -23,7 +24,7 @@ export class App extends Component {
 
 	render() {
 		if (!this.state.rehydrated) {
-			return <p>Loading...</p>;
+			return <Loading />;
 		}
 		return (
 			<div className="App">

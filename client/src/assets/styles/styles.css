@@ -54,67 +54,6 @@
 .flex-12 {
   flex: 12; }
 
-header {
-  height: 336px;
-  width: 100%;
-  background-color: #CF000F;
-  background: linear-gradient(145deg, #CF000F, #F22613);
-  font-family: Open Sans, sans-serif;
-  color: #FFFFFF;
-  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.12), 0 2px 2px 0 rgba(0, 0, 0, 0.24);
-  margin-bottom: 100px; }
-  header .menu, header .close {
-    cursor: pointer;
-    position: relative;
-    top: 25px;
-    transform: scale(1.5); }
-  header .close {
-    left: 80%; }
-  header .menu {
-    left: 25px; }
-  header .header-container .header-text {
-    text-align: center;
-    position: relative;
-    top: 60px; }
-    header .header-container .header-text .title {
-      cursor: pointer;
-      color: #FFFFFF;
-      position: relative;
-      font-size: 72px;
-      width: 100%;
-      top: 37%;
-      text-align: center;
-      font-weight: 400;
-      text-shadow: 0 2px 4px #4D4D4D; }
-      header .header-container .header-text .title:focus {
-        outline: 0; }
-    header .header-container .header-text p {
-      font-size: 24px;
-      text-align: center;
-      top: 40%;
-      position: relative;
-      width: 100%;
-      font-weight: 100;
-      text-shadow: 0 2px 4px #4D4D4D; }
-  header .header-container button {
-    border: none;
-    background: none;
-    width: 150px;
-    height: 35px;
-    padding: 0;
-    position: relative;
-    margin-top: 160px;
-    left: 50%;
-    transform: translate(-50%);
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    font: 14px Roboto, sans-serif;
-    font-weight: 700;
-    color: #CF000F;
-    cursor: pointer; }
-    header .header-container button:focus {
-      outline: 0; }
-
 .scale {
   transform: scale(1.5); }
 

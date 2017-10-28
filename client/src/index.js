@@ -8,7 +8,7 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import registerServiceWorker from './registerServiceWorker';
 
 import './index.css';
-import './assets/styles/styles.css';
+import './assets/styles/styles.scss';
 import { App } from './app/App';
 import { appStore } from './app/store';
 

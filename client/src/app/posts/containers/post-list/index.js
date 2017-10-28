@@ -1,5 +1,4 @@
 import React from 'react';
-import { render } from 'react-dom';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loadPosts } from '../../../state/actions/post-actions';

@@ -20,8 +20,8 @@ class PostList extends React.Component {
     const { list, loading } = this.props
     return (
       list.map(post => (
-        <Link to={`/posts/${post.id}`}>
-          <Post key={post.id} post={post} />  
+        <Link key={post.id} to={`/posts/${post.id}`}>
+          <Post post={post} />  
         </Link>  
       ))
     )

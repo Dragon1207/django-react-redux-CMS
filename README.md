@@ -2,7 +2,7 @@
 Django + React + Redux CMS
 
 # Getting Started
-1. Make sure you have mysql, python, pip, node, and @angular/cli installed.
+1. Make sure you have mysql, python, pip, and node installed.
 2. Install virtualenv
 ```
 pip install virtualenv

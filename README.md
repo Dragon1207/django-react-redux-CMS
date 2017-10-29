@@ -1,8 +1,8 @@
 # djudo
 Django + React + Redux CMS
 
-# Getting Started
-1. Make sure you have mysql, python, pip, node, and @angular/cli installed.
+## Getting Started
+1. Make sure you have mysql, python, pip, and node installed.
 2. Install virtualenv
 ```
 pip install virtualenv
@@ -76,16 +76,14 @@ ng serve //the url is http://localhost:4200
 http://localhost:8000/admin/
 ```
 
-# API
+## API
 The REST layer is created from serializing the models in django. They're exposed at http://localhost:8000/api/
 i.e. http://localhost:8000/api/posts/
 
-# Front-End
+## Front-End
 1. Your main views and development sandbox will exist at the client server url localhost:4200 to maintain hot-reloading and development efficiency, reading from the rest-layer provided.
 2. To run a build and view the project in it's entirety at localhost:8000, run a build from the client.
 ```
 ng build
 ```
 
-Features coming soon:
-- comments

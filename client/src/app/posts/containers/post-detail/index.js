@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import { getPostDetail } from '../../../state/actions/post-actions';
 import { appStore } from '../../../store';
-import Loading from '../../../spinner';
+import Loading from '../../../loading';
 import PostDetailComponent from '../../components/post-detail';
 
 class PostDetail extends Component {

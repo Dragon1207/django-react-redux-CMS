@@ -7,7 +7,7 @@ import Header from './header';
 import {Home} from './home';
 import Footer from './footer';
 import Posts from './posts'
-import Loading from './spinner';
+import Loading from './loading';
 
 export class App extends Component {
 

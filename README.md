@@ -87,5 +87,3 @@ i.e. http://localhost:8000/api/posts/
 ng build
 ```
 
-Features coming soon:
-- comments

@@ -69,7 +69,7 @@ yarn install
 ```
 14. Run the client server
 ```
-ng serve //the url is http://localhost:4200
+yarn run start //the url is http://localhost:3000
 ```
 15. Head over to the server admin page to add posts and categories
 ```

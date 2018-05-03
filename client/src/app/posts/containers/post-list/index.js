@@ -2,7 +2,6 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { loadPosts } from '../../../state/actions/post-actions';
-import { appStore } from '../../../store';
 import { Post } from '../../components/post/index';
 
 class PostList extends React.Component {
@@ -16,7 +15,7 @@ class PostList extends React.Component {
   }
 
   render() {
-    const { list, loading } = this.props
+    const { list } = this.props
     return (
       list.map(post => (
         <Link key={post.id} to={`/posts/${post.id}`}>
@@ -29,7 +28,7 @@ class PostList extends React.Component {
 
 const mapStateToProps = state => {
   const { posts } = state;
-  const { post, loading, list } = posts;
+  const { loading, list } = posts;
   return {
     loading,
     list

@@ -15,7 +15,7 @@ function Menu(props) {
 	return (
 		<Drawer className={'drawer'} open={props.open}>
 			<Icon handleToggle={props.handleToggle} name={'close'}/>
-			<Link to="/"><MenuItem onClick={props.handleToggle}>Home</MenuItem></Link>
+			<Link to="/about"><MenuItem onClick={props.handleToggle}>Home</MenuItem></Link>
 			<Link to="/posts"><MenuItem onClick={props.handleToggle}>Posts</MenuItem></Link>
 		</Drawer>
 	)
@@ -26,13 +26,16 @@ export function HeaderComponent(props) {
 		<header>
 			<div className={'menu-container flex'}>
 				<div className={'flex-1 flex justify-center'}>
-					<NavLink to="/" activeClassName="menu-active">About</NavLink>
+					<NavLink to="/about" activeClassName="menu-active">About</NavLink>
 				</div>
 				<div className={'flex-1 flex justify-center'}>
-					<NavLink to="/" activeClassName="menu-active">Portfolio</NavLink>
+					<NavLink to="/portfolio" activeClassName="menu-active">Portfolio</NavLink>
 				</div>
 				<div className={'flex-1 flex justify-center'}>
-					<NavLink to="/" activeClassName="menu-active">Contact</NavLink>
+					<NavLink to="/posts" activeClassName="menu-active">Blog</NavLink>
+				</div>
+				<div className={'flex-1 flex justify-center'}>
+					<NavLink to="/contact" activeClassName="menu-active">Contact</NavLink>
 				</div>
 			</div>
 		</header>

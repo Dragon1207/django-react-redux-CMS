@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Switch, Route} from 'react-router-dom'
+import {Switch, Route, Redirect} from 'react-router-dom'
 import {persistStore} from 'redux-persist';
 
 import {appStore} from './store';
@@ -31,7 +31,10 @@ export class App extends Component {
 				<Header/>
 				<div className={"content-container"}>
 					<Switch>
-						<Route exact path='/' component={Home}/>
+						<Route exact path='/' render={() => (
+							<Redirect to='/about'/>
+						)}/>
+						<Route path='/about' component={Home}/>
 						<Route path='/posts' component={Posts}/>
 					</Switch>
 				</div>

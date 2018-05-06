@@ -1,14 +1,25 @@
 @import '../../assets/styles/partials/variables';
+@import '../../assets/styles/partials/grid';
 
 header {
-  height: 336px;
+  height: 50px;
   width: 100%;
-  background-color: $monza-red;
-  background: linear-gradient(145deg, $monza-red, #F22613);
   font-family: $open-sans;
   color: $white;
-  box-shadow: 0 0 2px 0 rgba(0,0,0,0.12), 0 2px 2px 0 rgba(0,0,0,0.24);
   margin-bottom: 100px;
+  position: relative;
+
+  .menu-container {
+    position: absolute;
+    width: 80%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    .menu-active {
+      border-bottom: 3px solid $monza-red;
+    }
+  }
 
   .menu, .close {
     cursor: pointer;
@@ -26,10 +37,17 @@ header {
   }
 
   .header-container {
+    height: 100%;
+    position: relative;
+
     .header-text {
       text-align: center;
       position: relative;
-      top: 60px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
       .title {
         cursor: pointer;
         color: $white;

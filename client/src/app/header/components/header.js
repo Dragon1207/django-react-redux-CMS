@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink, Link} from 'react-router-dom';
 import Drawer from 'material-ui/Drawer';
 import MenuItem from 'material-ui/MenuItem';
 
@@ -24,14 +24,16 @@ function Menu(props) {
 export function HeaderComponent(props) {
 	return (
 		<header>
-			<Menu handleToggle={props.handleToggle} open={props.open}/>
-			<div className={'header-container'}>
-				<Icon handleToggle={props.handleToggle} name={'menu'}/>
-				<div className='header-text'>
-					<Link to="/"><h1 className={'title'}>Djudo</h1></Link>
-					<h2>the next generation of cms</h2>
+			<div className={'menu-container flex'}>
+				<div className={'flex-1 flex justify-center'}>
+					<NavLink to="/" activeClassName="menu-active">About</NavLink>
 				</div>
-				<button>Get Started</button>
+				<div className={'flex-1 flex justify-center'}>
+					<NavLink to="/" activeClassName="menu-active">Portfolio</NavLink>
+				</div>
+				<div className={'flex-1 flex justify-center'}>
+					<NavLink to="/" activeClassName="menu-active">Contact</NavLink>
+				</div>
 			</div>
 		</header>
 	)

@@ -8,24 +8,7 @@ import { Row, RowText, TimeLapseImg } from './components/rows';
 export function Home() {
   return (
     <section className={'home'} >
-      <Row class={'flex-row'}>
-        <RowText
-          label={config.speed.label}
-          desc={config.speed.description} />
-        <TimeLapseImg/>
-      </Row>
-      <Row class={'flex-row'}>
-        <img alt='hybrid app' className={'scale'} src={hybridImg} />
-        <RowText
-          label={config.hybrid.label}
-          desc={config.hybrid.description}/>
-      </Row>
-      <Row>
-        <RowText
-          label={config.allDevices.label}
-          desc={config.allDevices.description}/>
-        <img alt='for-all-devices' className={'allDevices-img'} src={allDevicesImg} />
-      </Row>
+      <h1 className={'home-h1'}>rafay.io</h1>
     </section>
   )
 }

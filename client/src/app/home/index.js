@@ -8,7 +8,10 @@ import { Row, RowText, TimeLapseImg } from './components/rows';
 export function Home() {
   return (
     <section className={'home'} >
-      <h1 className={'home-h1'}>rafay.io</h1>
+      <div className={'home-text'}>
+        <h1>rafay.io</h1>
+        <h2><i>Tech + Music = Life</i></h2>
+      </div>
     </section>
   )
 }

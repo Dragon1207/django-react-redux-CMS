@@ -3,7 +3,7 @@ import React from 'react';
 function Footer() {
   return (
     <footer>
-      <div className={"footer-title"} >Djudo</div>
+      <div className={"footer-title"} >ninja</div>
     </footer>
   )
 }

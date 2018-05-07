@@ -16,6 +16,10 @@ header {
     top: 50%;
     transform: translate(-50%, -50%);
 
+    a {
+      color: $lynch;
+    }
+
     .menu-active {
       border-bottom: 3px solid $turquoise;
     }

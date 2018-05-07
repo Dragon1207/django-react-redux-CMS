@@ -1,0 +1,59 @@
+@import '../../assets/styles/partials/variables';
+@import '../../assets/styles/partials/grid';
+
+.portfolio-box {
+  height: 300px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 500px;
+  justify-content: center;
+  padding: 15px;
+
+  & > a {
+    margin: 3px;
+    box-shadow: 1px 1px 3px $light-black;
+    width: 30%;
+    transition: 1s box-shadow;
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 2px 2px 5px $light-black;
+    }
+
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .nucific {
+    background-image: url('../../assets/images/nucific.png');
+    background-size: cover;
+    background-position: 38%;
+  }
+
+  .themighty {
+    background-image: url('../../assets/images/themighty.png');
+    background-size: cover;
+  }
+
+  .stellar {
+    background-image: url('../../assets/images/stellar.png');
+    background-size: cover;
+  }
+
+  .centrl {
+    background-image: url('../../assets/images/centrl.png');
+    background-size: cover;
+  }
+
+  .viscira {
+    background-image: url('../../assets/images/viscira.png');
+    background-size: cover;
+  }
+
+  .noxster {
+    background-image: url('../../assets/images/noxster.png');
+    background-size: cover;
+  }
+}

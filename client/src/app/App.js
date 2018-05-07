@@ -8,6 +8,7 @@ import {Home} from './home';
 import Footer from './footer';
 import Posts from './posts'
 import Loading from './loading';
+import Portfolio from './portfolio';
 
 export class App extends Component {
 
@@ -36,6 +37,8 @@ export class App extends Component {
 						)}/>
 						<Route path='/about' component={Home}/>
 						<Route path='/posts' component={Posts}/>
+						<Route path='/portfolio' component={Portfolio}/>
+						<Redirect path='*' to='/about'/>
 					</Switch>
 				</div>
 				<Footer/>

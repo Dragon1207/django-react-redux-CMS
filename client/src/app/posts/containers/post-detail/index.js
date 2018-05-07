@@ -2,15 +2,9 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
 import { getPostDetail } from '../../../state/actions/post-actions';
-import { appStore } from '../../../store';
-import Loading from '../../../loading';
 import PostDetailComponent from '../../components/post-detail';
 
 class PostDetail extends Component {
-
-  constructor(props) {
-    super(props)
-  }
 
   componentDidMount() {
     let postId = this.props.match.params.number;

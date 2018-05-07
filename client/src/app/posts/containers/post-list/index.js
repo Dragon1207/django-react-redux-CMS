@@ -6,10 +6,6 @@ import { Post } from '../../components/post/index';
 
 class PostList extends React.Component {
 
-  constructor(props) {
-    super(props);
-  }
-
   componentDidMount() {
     this.props.dispatch(loadPosts());
   }

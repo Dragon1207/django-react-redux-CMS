@@ -6,7 +6,7 @@ header {
   width: 100%;
   font-family: $open-sans;
   color: $white;
-  margin-bottom: 100px;
+  margin-bottom: 15px;
   position: relative;
 
   .menu-container {
@@ -21,7 +21,7 @@ header {
     }
 
     .menu-active {
-      border-bottom: 3px solid $turquoise;
+      border-bottom: 3px solid $orange;
     }
   }
 

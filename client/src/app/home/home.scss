@@ -49,17 +49,73 @@ section {
       font-weight: 100;
       text-align: center;
       font-size: 28px;
+
+      .contact-info {
+        margin-top: 5%;
+        display: flex;
+        justify-content: center;
+
+        .email-icon {
+          display: flex;
+          flex-direction: column;
+          margin-right: 3%;
+          position: relative;
+          cursor: pointer;
+
+          i {
+            font-size: 45px;
+            color: $black;
+          }
+
+          span {
+            visibility: hidden;
+            position: absolute;
+            top: 0;
+            transition: top 1s;
+            left: 0;
+            transform: translateX(-50%);
+            font-weight: 300;
+
+            a {
+              color: $black;
+            }
+          }
+
+          &:hover {
+            span {
+              visibility: visible;
+              top: 45px;
+            }
+          }
+        }
+
+        .github-icon {
+          .github-img {
+            width: 42px;
+          }
+        }
+      }
     }
 
     .home-text {
       position: relative;
 
       h1 {
+        position: relative;
+        width: 400px;
+        margin: auto;
+        text-align: right;
         font-size: 10em;
         font-weight: 300;
         text-shadow: 0px 2px 4px $black;
         color: $porcelain;
-        text-align: center;
+
+        .dancing-r {
+          position: absolute;
+          transform: skew(0deg);
+          left: 48px;
+          animation: dance 1s;
+        }
       }
 
       h2 {

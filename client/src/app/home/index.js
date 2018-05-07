@@ -10,7 +10,7 @@ export function Home() {
     <section className={'home'} >
       <div className={'home-text'}>
         <h1>rafay.io</h1>
-        <h2><i>Tech + Music = Life</i></h2>
+        <h2>Tech. Music. Life.</h2>
       </div>
     </section>
   )

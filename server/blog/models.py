@@ -69,6 +69,9 @@ class Category(models.Model):
     title = models.CharField(max_length=100, db_index=True)
     slug = models.SlugField(max_length=100, db_index=True)
 
+    class Meta:
+        verbose_name_plural = "categories"
+
     objects = CategoryManager()
 
     def __unicode__(self):

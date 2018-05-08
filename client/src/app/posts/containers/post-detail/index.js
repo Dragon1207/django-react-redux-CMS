@@ -6,6 +6,10 @@ import PostDetailComponent from '../../components/post-detail';
 
 class PostDetail extends Component {
 
+  constructor(props) {
+    super(props);
+  }
+
   componentDidMount() {
     let postId = this.props.match.params.number;
     this.props.dispatch(getPostDetail(postId));

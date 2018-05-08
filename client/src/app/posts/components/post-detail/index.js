@@ -19,7 +19,7 @@ export default function PostDetailComponent({ post }) {
               </div>
               <div className='flex-row'>
                 <span className='flex-3'>Category:</span>
-                <p>{post.category_obj.title}</p>
+                <p>{post.category_obj !== undefined ? post.category_obj.title : ''}</p>
               </div>
             </div>
           </div>

@@ -25,5 +25,5 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/users/', include("accounts.api.urls", namespace='users-api')),
     url(r'^api/comments/', include("comments.api.urls", namespace='comments-api')),
-    url(r'^.*', TemplateView.as_view(template_name="ng-index.html"), name='home'),
+    url(r'^.*', TemplateView.as_view(template_name="react-index.html"), name='home'),
 ]

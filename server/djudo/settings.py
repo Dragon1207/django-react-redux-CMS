@@ -157,7 +157,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = baseDirPath('static-root')
+STATIC_ROOT = basePath('static-root')
 
 STATICFILES_DIRS = [
     basePath('static')

@@ -70,11 +70,12 @@ section {
           span {
             visibility: hidden;
             position: absolute;
+            opacity: 0;
             top: 0;
-            transition: top 1s;
             left: 0;
             transform: translateX(-50%);
             font-weight: 300;
+            transition: opacity 1s;
 
             a {
               color: $black;
@@ -83,6 +84,7 @@ section {
 
           &:hover {
             span {
+              opacity: 1;
               visibility: visible;
               top: 45px;
             }

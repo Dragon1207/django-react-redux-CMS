@@ -7,8 +7,7 @@ export function Home() {
       <div className={'home-text flex-6'}>
         <h1><span className={'dancing-r'}>r</span>afay</h1>
         <h2>
-          <i>tech enthusiast. musician. <br/>
-            your friendly neighborhood silicon-man.
+          <i>tech enthusiast. musician.
           </i>
         </h2>
         <div className={'home-about-text'}>

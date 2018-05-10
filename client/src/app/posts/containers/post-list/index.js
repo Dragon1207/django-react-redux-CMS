@@ -14,9 +14,16 @@ class PostList extends React.Component {
     const { list } = this.props
     return (
       list.map(post => (
-        <Link key={post.id} to={`/posts/${post.id}`}>
-          <Post post={post} />  
-        </Link>  
+        <section className='flex'>
+	        <div className='flex-9'>
+		        <Link key={post.id} to={`/posts/${post.id}`}>
+			        <Post post={post} />
+		        </Link>
+          </div>
+          <div className='flex-3'>
+            categories
+          </div>
+        </section>
       ))
     )
   }

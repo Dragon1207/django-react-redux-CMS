@@ -64,7 +64,7 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js; yarn run copy-build",
-    "copy-build": "cp -r build/* ../server/static",
+    "copy-build": "cp -r build/* ../server/static; cd ../server/static && rm -rf media; mv static/media . ",
     "test": "node scripts/test.js --env=jsdom",
     "sass": "sass --watch src/assets/styles/styles.scss:src/assets/styles/styles.css"
   },

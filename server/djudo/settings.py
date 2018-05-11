@@ -29,7 +29,7 @@ def basePath(path):
 SECRET_KEY = 'rqp1(y3yjxog^ph)g3*bg!b_b855kjd*v62-m=4mdp_-c3!9b^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['localhost', '127.0.0.1', '[::1]']
 

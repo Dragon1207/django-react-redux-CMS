@@ -16,8 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic.base import TemplateView
-from rest_framework import routers
-from blog.api import views, urls
+from rest_framework_jwt.views import obtain_jwt_token
 
 urlpatterns = [
     url(r'^api/', include("blog.api.urls", namespace='posts-api')),
@@ -25,5 +24,6 @@ urlpatterns = [
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),
     url(r'^api/users/', include("accounts.api.urls", namespace='users-api')),
     url(r'^api/comments/', include("comments.api.urls", namespace='comments-api')),
+    url(r'^api-token-auth/', obtain_jwt_token),
     url(r'^.*', TemplateView.as_view(template_name="react-index.html"), name='home'),
 ]

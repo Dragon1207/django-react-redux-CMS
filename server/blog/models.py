@@ -38,7 +38,7 @@ class Post(models.Model):
     body = models.TextField()
     published = models.BooleanField(default=True)
     created = models.DateTimeField(db_index=True, auto_now_add=True)
-    category = models.ForeignKey('blog.Category')
+    category = models.ForeignKey('blog.Category', related_name='posts', on_delete=models.CASCADE)
 
     objects = PostManager()
 
@@ -68,10 +68,9 @@ class Category(models.Model):
     id = models.AutoField(primary_key=True)
     title = models.CharField(max_length=100, db_index=True)
     slug = models.SlugField(max_length=100, db_index=True)
-
     class Meta:
-        verbose_name_plural = "categories"
-
+        verbose_name = ("Category")
+        verbose_name_plural = ("Categories")
     objects = CategoryManager()
 
     def __unicode__(self):

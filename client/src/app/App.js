@@ -38,7 +38,6 @@ export class App extends Component {
 						<Route path='/about' component={Home}/>
 						<Route path='/posts' component={Posts}/>
 						<Route path='/portfolio' component={Portfolio}/>
-						<Redirect path='*' to='/about'/>
 					</Switch>
 				</div>
 				<Footer/>

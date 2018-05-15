@@ -6,7 +6,7 @@ from rest_framework.serializers import (
     ModelSerializer,
     SerializerMethodField,
     ValidationError
-    )
+)
 
 from accounts.api.serializers import UserDetailSerializer
 
@@ -64,10 +64,12 @@ def create_comment_serializer(model_type='post', slug=None, parent_id=None, user
 
 class CommentSerializer(ModelSerializer):
     reply_count = SerializerMethodField()
+    user = UserDetailSerializer()
     class Meta:
         model = Comment
         fields = [
             'id',
+            'user',
             'content_type',
             'object_id',
             'parent',

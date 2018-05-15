@@ -86,3 +86,14 @@ class PostSlugSerializer(serializers.ModelSerializer):
             'category_obj',
             'comments'
         )
+
+class CategoryPostSerializer(serializers.ModelSerializer):
+    posts = PostSerializer(many=True, read_only=True)
+    class Meta:
+        model = Category
+        fields = (
+            'id',
+            'title',
+            'slug',
+            'posts'
+        )

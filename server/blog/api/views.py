@@ -12,7 +12,7 @@ from rest_framework.permissions import (
     IsAuthenticatedOrReadOnly,
 )
 from blog.models import Post, Category
-from .serializers import UserSerializer, PostSerializer, CategorySerializer
+from .serializers import UserSerializer, PostSerializer, CategorySerializer, CategoryPostSerializer
 
 class UserViewSet(viewsets.ModelViewSet):
     """
@@ -28,7 +28,8 @@ class PostViewSet(generics.ListAPIView):
     serializer_class = PostSerializer
     filter_backends= [filters.SearchFilter, filters.OrderingFilter]
     permission_classes = [AllowAny]
-    search_fields = ['title', 'body']
+    search_fields = ['title']
+    ordering_fields = ('title')
 
     def get_queryset(self, *args, **kwargs):
         """
@@ -47,6 +48,21 @@ class CategoryViewApi(generics.ListAPIView):
     """
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+
+class CategoryDetailViewApi(generics.RetrieveAPIView):
+    """
+    List Serialized Category Objects
+    """
+    queryset = Category.objects.all()
+    serializer_class = CategoryPostSerializer
+    lookup_field = 'pk'
+
+class CategoryPostViewApi(generics.ListAPIView):
+    """
+    List Serialized Category Objects
+    """
+    queryset = Category.objects.all()
+    serializer_class = CategoryPostSerializer
 
 
 class PostDetailAPIView(generics.RetrieveAPIView):

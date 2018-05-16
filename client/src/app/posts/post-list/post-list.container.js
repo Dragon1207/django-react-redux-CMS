@@ -45,7 +45,7 @@ class PostList extends React.Component {
     return (
 	    <div className='flex posts-container'>
 		    <section className='flex-10'>
-			    <h1>{this.state.categoryPostTitle} Posts</h1>
+			    <h1>{this.state.categoryPostTitle ? this.state.categoryPostTitle : 'All'} Posts</h1>
           {
 	          this.state.posts.length >= 1 ?
 		          this.state.posts.map(post => (

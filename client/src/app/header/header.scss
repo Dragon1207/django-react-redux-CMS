@@ -2,12 +2,13 @@
 @import '../../assets/styles/partials/grid';
 
 header {
-  height: 100px;
+  height: 70px;
   width: 100%;
-  font-family: $open-sans;
-  color: $white;
-  margin-bottom: 15px;
+  font-family: Open Sans, sans-serif;
+  color: #FFFFFF;
   position: relative;
+  box-shadow: 1px 1px 4px #888;
+  margin-bottom: 5%;
 
   .menu-container {
     position: absolute;

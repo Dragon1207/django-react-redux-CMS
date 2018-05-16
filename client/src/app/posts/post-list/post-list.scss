@@ -1,59 +1,73 @@
-.post-list-container {
-  margin-top: 50px;
-  width: 90%;
-  margin: auto;
+.posts-container {
 
-  section {
-    width: 100%;
-    .no-padding {
+  .category-title {
+    margin: 5px 0;
+    color: $lynch;
+    cursor: pointer;
+  }
+
+  h1 {
+    margin-bottom: 10px;
+    color: $night-black;
+    font-weight: 500;
+  }
+
+  .post-list-container {
+    width: 90%;
+
+    section {
+      width: 100%;
+
+      .no-padding {
         padding: 0;
-    }
+      }
 
-    h1 {
-      font-family: $roboto;
-      font-weight: 500;
-      font-size: 36px;
-      color: $grey;
-      margin-bottom: 25px;
-    }
-    h2 {
-      font-weight: 300;
-    }
-    h3 {
-      font-weight: 300;
-      font-size: 14px;
-      margin-top: 15px;
-    }
-
-    .post-column {
-      width: 90%
-    }
-
-    .post-container {
-
-      div {
-        cursor: pointer;
-        margin: 25px 0;
+      h1 {
+        font-family: $roboto;
+        font-weight: 500;
+        font-size: 36px;
         color: $grey;
-        transition: color .5s;
-        box-shadow: 0 0 1px rgba(0,0,0,.11), 0 1px 2px rgba(0,0,0,.22);
-        transition: box-shadow .25s cubic-bezier(.4,0,.2,1);
-        padding: 15px;
-        border-radius: 2px;
-        &:hover {
-          box-shadow: -1px 3px 5px $box-shadow-grey;
-          color: #2574A9;
+        margin-bottom: 25px;
+      }
+      h2 {
+        font-weight: 300;
+      }
+      h3 {
+        font-weight: 300;
+        font-size: 14px;
+        margin-top: 15px;
+      }
+
+      .post-column {
+        width: 90%
+      }
+
+      .post-container {
+
+        div {
+          cursor: pointer;
+          margin: 25px 0;
+          color: $grey;
+          transition: color .5s;
+          box-shadow: 0 0 1px rgba(0,0,0,.11), 0 1px 2px rgba(0,0,0,.22);
+          transition: box-shadow .25s cubic-bezier(.4,0,.2,1);
+          padding: 15px;
+          border-radius: 2px;
+          &:hover {
+            box-shadow: -1px 3px 5px $box-shadow-grey;
+            color: #2574A9;
+          }
         }
       }
-    }
 
-    .categories-container {
-      margin: 25px;
-      align-items: flex-start;
-      /deep/ .mat-list-text {
-        font-weight: 300;
-        font-family: $roboto;
-        color: $grey;
+      .categories-container {
+        margin: 25px;
+        align-items: flex-start;
+        /deep/ .mat-list-text {
+          font-weight: 300;
+          font-family: $roboto;
+          color: $grey;
+        }
       }
     }
   }

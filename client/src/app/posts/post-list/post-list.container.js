@@ -37,8 +37,9 @@ class PostList extends React.Component {
   render() {
     const { list, categoryList } = this.props
     return (
-	    <section className='flex'>
-		    <div className='flex-10'>
+	    <div className='flex posts-container'>
+		    <section className='flex-10'>
+			    <h1>Posts</h1>
           {
 	          this.state.posts.length >= 1 ?
 		          this.state.posts.map(post => (
@@ -48,20 +49,24 @@ class PostList extends React.Component {
 		          )) :
 		          'no posts available'
           }
-		    </div>
-		    <div className='flex-2'>
-			    <div onClick={() => this.setPost(list)}>
+		    </section>
+		    <section className='flex-2'>
+			    <h1>Categories</h1>
+			    <div className='category-title'
+			         onClick={() => this.setPost(list)}>
 				    All
 			    </div>
 			    {
 				    categoryList.map(category => (
-					    <div onClick={() => this.setPost(category.posts)} key={category.id}>
+					    <div className='category-title'
+					         onClick={() => this.setPost(category.posts)}
+					         key={category.id}>
 					      { category.title }
 					    </div>
 				    ))
 			    }
-		    </div>
-	    </section>
+		    </section>
+	    </div>
     )
   }
 }

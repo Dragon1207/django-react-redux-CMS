@@ -4,7 +4,7 @@ export function Post(props) {
 	return (
 		<section className={'post-list-container'}>
 			<div>
-				<section className='flex-row flex10'>
+				<section className='flex-row'>
 					<div className='flex-column post-column post-container'>
 						<div className='post'>
 							<h2>{props.post.title}</h2>

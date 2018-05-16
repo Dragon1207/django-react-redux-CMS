@@ -40,11 +40,13 @@ class PostList extends React.Component {
 	    <section className='flex'>
 		    <div className='flex-10'>
           {
-	          this.state.posts.map(post => (
-		          <Link key={post.id} to={`/posts/${post.id}`}>
-			          <Post post={post} />
-		          </Link>
-	          ))
+	          this.state.posts.length >= 1 ?
+		          this.state.posts.map(post => (
+			          <Link key={post.id} to={`/posts/${post.id}`}>
+				          <Post post={post} />
+			          </Link>
+		          )) :
+		          'no posts available'
           }
 		    </div>
 		    <div className='flex-2'>

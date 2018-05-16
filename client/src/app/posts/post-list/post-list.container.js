@@ -8,7 +8,8 @@ import {loadCategories} from "../category-actions";
 class PostList extends React.Component {
 
 	initialState = {
-		posts: []
+		posts: [],
+		categoryPostTitle: 'All'
 	};
 
 	constructor(props) {
@@ -30,8 +31,13 @@ class PostList extends React.Component {
   	console.log(nextProps);
   }
 
-  setPost(posts) {
+  setPost(posts, title) {
   	this.setState({ posts: posts });
+  	this.setCategoryPostTitle(title);
+  }
+
+  setCategoryPostTitle(title) {
+		this.setState({ categoryPostTitle: title });
   }
 
   render() {
@@ -39,7 +45,7 @@ class PostList extends React.Component {
     return (
 	    <div className='flex posts-container'>
 		    <section className='flex-10'>
-			    <h1>Posts</h1>
+			    <h1>{this.state.categoryPostTitle} Posts</h1>
           {
 	          this.state.posts.length >= 1 ?
 		          this.state.posts.map(post => (
@@ -59,7 +65,7 @@ class PostList extends React.Component {
 			    {
 				    categoryList.map(category => (
 					    <div className='category-title'
-					         onClick={() => this.setPost(category.posts)}
+					         onClick={() => this.setPost(category.posts, category.title)}
 					         key={category.id}>
 					      { category.title }
 					    </div>

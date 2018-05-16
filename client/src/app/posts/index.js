@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
-import PostList from './containers/post-list';
-import PostDetail from './containers/post-detail';
+import PostList from './post-list/post-list.container';
+import PostDetail from './post-detail/post-detail.container';
 
 export default function Posts() {
   return (

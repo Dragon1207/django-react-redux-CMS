@@ -1,8 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { loadPosts } from '../../../state/actions/post-actions';
-import { Post } from '../../components/post/index';
+import { loadPosts } from '../post-actions';
+import { Post } from './post-list.component';
 
 class PostList extends React.Component {
 
@@ -14,7 +14,7 @@ class PostList extends React.Component {
     const { list } = this.props
     return (
 	    <section className='flex'>
-		    <div className='flex-9'>
+		    <div className='flex-10'>
           {
 	          list.map(post => (
 		          <Link key={post.id} to={`/posts/${post.id}`}>
@@ -23,7 +23,7 @@ class PostList extends React.Component {
 	          ))
           }
 		    </div>
-		    <div className='flex-3'>
+		    <div className='flex-2'>
 			    categories
 		    </div>
 	    </section>

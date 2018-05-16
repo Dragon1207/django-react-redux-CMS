@@ -1,7 +1,7 @@
-import { CategoryActions, loadCategoriesSuccess } from '../actions/category-actions';
+import { CategoryActions, loadCategoriesSuccess } from './category-actions';
 import 'rxjs/add/operator/concatMap';
 import 'rxjs/add/operator/map';
-import { ApiFacade } from '../../modules/api.facade';
+import { ApiFacade } from '../modules/api.facade';
 const api = new ApiFacade();
 
 export const categoriesEpic = action$ => action$

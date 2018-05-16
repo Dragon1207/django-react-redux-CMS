@@ -1,4 +1,4 @@
-import { actionCreator } from '../../modules/utils';
+import { actionCreator } from '../modules/utils';
 
 export const PostActions = {
   LOAD_POSTS: 'LOAD_POSTS',

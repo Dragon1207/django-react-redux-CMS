@@ -1,5 +1,5 @@
 import React from 'react';
-import DjudoComments from '../../components/comments';
+import DjudoComments from '../comments/comments.component';
 import { Card } from 'material-ui/Card';
 import * as moment from 'moment';
 

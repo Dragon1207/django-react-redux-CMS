@@ -1,9 +1,13 @@
 import { CategoryActions } from './category-actions';
 
-export const categoriesReducer = (state = [], action) => {
+const CATEGORY_INITIAL_STATE = {
+  categoryList: []
+}
+
+export const categoriesReducer = (state = CATEGORY_INITIAL_STATE, action) => {
   switch (action.type) {
     case CategoryActions.LOAD_CATEGORIES_SUCCESS:
-      return { ...state, list: action.payload }
+      return { ...state, categoryList: action.payload }
     default:
       return state;  
   }

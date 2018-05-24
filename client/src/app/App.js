@@ -9,6 +9,7 @@ import Footer from './footer';
 import Posts from './posts'
 import Loading from './loading';
 import Portfolio from './portfolio';
+import Images from './images';
 
 export class App extends Component {
 

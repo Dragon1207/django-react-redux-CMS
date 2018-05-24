@@ -1,5 +1,4 @@
 import React from 'react';
-import nucificImg from '../../assets/images/nucific.png'
 
 export class PortfolioContainer extends React.Component {
 	render() {

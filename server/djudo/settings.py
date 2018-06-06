@@ -31,7 +31,7 @@ def basePath(path):
 SECRET_KEY = 'rqp1(y3yjxog^ph)g3*bg!b_b855kjd*v62-m=4mdp_-c3!9b^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 #ALLOWED_HOSTS = ['appservers', 'localhost', '127.0.0.1', '[::1]', '127.0.0.1:8080', '0.0.0.0', 'app_servers', '0.0.0.0:8080', '192.168.99.100:8000', '192.168.99.100:8080']
 ALLOWED_HOSTS = ['*']
@@ -166,10 +166,10 @@ STATICFILES_DIRS = [
     basePath('static')
 ]
 
-#SECURE_CONTENT_TYPE_NOSNIFF = True
-#SECURE_BROWSER_XSS_FILTER = True
-SECURE_SSL_REDIRECT = False
-#SESSION_COOKIE_SECURE = True
-#CSRF_COOKIE_SECURE = True
-#CSRF_COOKIE_HTTPONLY = True
-#X_FRAME_OPTIONS = 'DENY'
+SECURE_CONTENT_TYPE_NOSNIFF = True
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_SSL_REDIRECT = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
+CSRF_COOKIE_HTTPONLY = True
+X_FRAME_OPTIONS = 'DENY'

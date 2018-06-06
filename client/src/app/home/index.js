@@ -1,5 +1,5 @@
 import React from 'react';
-import githubIcon from '../../assets/images/github-icon.svg';
+import githubIcon from 'https://rafayio-assets.nyc3.digitaloceanspaces.com/rafay.io/assets/media/github-icon.svg';
 
 export function Home() {
   return (

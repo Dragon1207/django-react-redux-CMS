@@ -1,5 +1,4 @@
 import React from 'react';
-import githubIcon from 'https://rafayio-assets.nyc3.digitaloceanspaces.com/rafay.io/assets/media/github-icon.svg';
 
 export function Home() {
   return (
@@ -21,7 +20,7 @@ export function Home() {
             <a className={'github-icon'}
                target={'blank'}
                href={'https://github.com/rafay826'}>
-              <img className={'github-img'} alt={'github'} src={githubIcon}/>
+              <img className={'github-img'} alt={'github'} src='https://rafayio-assets.nyc3.digitaloceanspaces.com/rafay.io/assets/media/github-icon.svg'/>
             </a>
           </div>
         </div>

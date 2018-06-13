@@ -63,10 +63,11 @@
   },
   "scripts": {
     "start": "node scripts/start.js",
-    "build": "node scripts/build.js; yarn run copy-build",
+    "build": "node scripts/build.js; yarn run copy-build; yarn run deploy-assets",
     "copy-build": "cp -r build/* ../server/static; cd ../server/static && rm -rf media; mv static/media . ",
     "test": "node scripts/test.js --env=jsdom",
-    "sass": "sass --watch src/assets/styles/styles.scss:src/assets/styles/styles.css"
+    "sass": "sass --watch src/assets/styles/styles.scss:src/assets/styles/styles.css",
+    "deploy-assets": "s3cmd put --recursive build/* s3://rafayio-assets/rafay.io/assets/"
   },
   "jest": {
     "collectCoverageFrom": [

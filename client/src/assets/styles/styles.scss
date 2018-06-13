@@ -21,6 +21,18 @@ ul {
   list-style: none;
 }
 
+@media screen and (max-width: 10400px) {
+  .content-container {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1040px) {
+  .content-container {
+    width: 75%;
+  }
+}
+
 html {
   height: 100%;
   body {
@@ -28,7 +40,6 @@ html {
     min-height: 100%;
     background-color: $white;
     .content-container {
-      width: 75%;
       margin: auto;
       padding-bottom: 100px;
       font-family: $roboto;

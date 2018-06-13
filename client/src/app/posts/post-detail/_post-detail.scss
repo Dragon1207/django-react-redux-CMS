@@ -2,6 +2,35 @@
 @import '../../../assets/styles/partials/mixins';
 @import '../../../assets/styles/partials/variables';
 
+@media screen and (max-width: 720px) {
+  .post-header-container {
+    flex-direction: column;
+  }
+
+  .post-title {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .post-info {
+    font-size: 12px;
+    p {
+      font-size: 12px !important;
+    }
+    .flex-row {
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (min-width: 720px) {
+  .post-title {
+    font-size: 40px;
+    text-align: center;
+  }
+}
+
 .post-detail-container {
   width: 80%;
   margin: auto;
@@ -14,7 +43,6 @@
       position: relative;
       .post-title {
         color: $night-black;
-        font-size: 40px;
         font-weight: 300;
       }
       .post-info {

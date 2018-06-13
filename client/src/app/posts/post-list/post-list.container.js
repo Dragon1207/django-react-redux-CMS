@@ -16,12 +16,9 @@ class PostList extends React.Component {
 		super(props);
 		this.setPost = this.setPost.bind(this);
 		this.state = this.initialState;
+		this.props.dispatch(loadPosts());
+		this.props.dispatch(loadCategories());
 	}
-
-  componentWillMount() {
-    this.props.dispatch(loadPosts());
-    this.props.dispatch(loadCategories());
-  }
 
   componentDidMount() {
 		this.setState({ posts: this.props.list });

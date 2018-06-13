@@ -1,6 +1,6 @@
 import { ajax } from 'rxjs/observable/dom/ajax';
 
-const baseUrl = 'http://localhost:8000/api';
+const baseUrl = 'https://rafay.io/api';
 
 export class ApiFacade {
 

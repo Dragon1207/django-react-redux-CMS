@@ -28,7 +28,7 @@ def basePath(path):
 # See https://docs.djangoproject.com/en/1.9/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'rqp1(y3yjxog^ph)g3*bg!b_b855kjd*v62-m=4mdp_-c3!9b^'
+SECRET_KEY = os.environ.get('SECRET_KEY');
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -158,7 +158,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = '/static/'
+STATIC_URL = 'https://rafayio-assets.nyc3.digitaloceanspaces.com/rafay.io/assets/'
 
 STATIC_ROOT = baseDirPath('static-root')
 
@@ -168,7 +168,7 @@ STATICFILES_DIRS = [
 
 SECURE_CONTENT_TYPE_NOSNIFF = True
 SECURE_BROWSER_XSS_FILTER = True
-SECURE_SSL_REDIRECT = True
+SECURE_SSL_REDIRECT = False
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 CSRF_COOKIE_HTTPONLY = True

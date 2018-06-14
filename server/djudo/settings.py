@@ -116,7 +116,7 @@ WSGI_APPLICATION = 'djudo.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'rafayio',
+        'NAME': 'djudo',
         'USER': 'root',
         'PASSWORD': 'root',
         'HOST': 'localhost',  # Or an IP Address that your DB is hosted on
@@ -158,7 +158,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
 
-STATIC_URL = 'https://rafayio-assets.nyc3.digitaloceanspaces.com/rafay.io/assets/'
+STATIC_URL = '/static/'
 
 STATIC_ROOT = baseDirPath('static-root')
 
